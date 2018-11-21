@@ -1,0 +1,51 @@
+.warp{
+  position: relative;
+}
+.footer{
+  height:1rem;
+  width: 100%;
+  border-top:1px solid #e2e2e2 ;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 99999;
+}
+.footer a{
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  font-size: .24rem;
+  margin-top: .05rem;
+}
+.content{
+  height: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1.2rem;
+}
+.footer a div{
+  margin: 0 auto;
+  width: .48rem;
+  height: .56rem;
+  position: relative;
+}
+.footer a div img{
+  width: 100%;
+  position: absolute;
+  top: .08rem;
+  left: 0;
+}
+.footer a:nth-child(3) div{
+  width: .4rem;
+}
+.footer a p{
+  font-size: .2rem;
+}
+.footer .main-active p{
+  color: #d5393c;
+}
+.footer .main-active div img:nth-child(2){
+  display: none;
+}
+
+

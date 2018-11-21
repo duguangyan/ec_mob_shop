@@ -1,0 +1,25 @@
+<div class="settings-center">
+  <!--<app-header [title]="title" (parentGoBack)="goBack()"></app-header>-->
+  <div class="center-content">
+    <ul>
+      <li (click)="goSettingsMessage()">
+        <img src="../../../../assets/imgs/settings-center-1.png" alt="图标">
+        <span>个人信息</span>
+        <img src="../../../../assets/imgs/arrows_right.png" alt="图标">
+      </li>
+      <!--<li (click)="goSettingsPhone()">
+        <img src="../../../../assets/imgs/settings-center-2.png" alt="图标">
+        <span>修改绑定手机号</span>
+        <img src="../../../../assets/imgs/arrows_right.png" alt="图标">
+      </li>-->
+      <li (click)="goSettingsPassworld()">
+        <img src="../../../../assets/imgs/settings-center-3.png" alt="图标">
+        <span>修改密码</span>
+        <img src="../../../../assets/imgs/arrows_right.png" alt="图标">
+      </li>
+    </ul>
+    <div class="center-btn" (click)="logout()">
+      退出登录
+    </div>
+  </div>
+</div>

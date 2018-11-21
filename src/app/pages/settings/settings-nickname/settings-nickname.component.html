@@ -1,0 +1,11 @@
+<div class="settings-nickname">
+  <!--<app-header [title]="title" (parentGoBack)="goBack()"></app-header>-->
+  <div class="nickname-content">
+      <div class="nickname-input">
+        <input type="text" [(ngModel)]="nickNameVal" placeholder="设置昵称 (4-20字符)" (keyup)="nickNameCheck()">
+      </div>
+      <div class="nickname-btn" [ngClass]="{'nickname-active':isChecked}" (click)="saveName()">
+        保存
+      </div>
+  </div>
+</div>

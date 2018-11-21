@@ -1,0 +1,12 @@
+<div class="payment-choice">
+  <div class="payment-choice-shade" (click)="doOk()"></div>
+  <ul @upIn @upOut>
+    <li>支付方式</li>
+    <li></li>
+    <!--<li (click)="doCheckIndex(1)"><img src="../../../../assets/imgs/paydo_icon_2.png" alt="图标"><span>支付宝</span>  <i [ngClass]="{'icon-active':checkIndex === 1,'icon-prototype':checkIndex !== 1}" ></i></li>-->
+    <li (click)="doCheckIndex(2)"><img src="../../../../assets/imgs/paydo_icon_3.png" alt="图标"><span>微信</span>    <i [ngClass]="{'icon-active':checkIndex === 2,'icon-prototype':checkIndex !== 2}" ></i></li>
+   <!-- <li (click)="doCheckIndex(3)"><img src="../../../../assets/imgs/paydo_icon_5.png" alt="图标"><span>银联</span>    <i [ngClass]="{'icon-active':checkIndex === 3,'icon-prototype':checkIndex !== 3}" ></i></li>-->
+    <li></li>
+    <li (click)="doOk()"><a href="javascript:void(0);">确认</a></li>
+  </ul>
+</div>

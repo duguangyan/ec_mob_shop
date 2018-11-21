@@ -1,0 +1,160 @@
+.shopping-order-debitnote{
+  height: 100%;
+  background-color: #fff;
+}
+.order-debitnote-content{
+
+  padding: 0 0 100px 0;
+}
+.order-debitnote-type,.order-debitnote-header{
+  height: 160px;
+  font-size: 30px;
+  color: #333;
+  background-color: #fff;
+}
+.debitnote-type-btn,.debitnote-header-btn{
+  padding: 20px 0 0 20px;
+
+}
+.debitnote-header-message span{
+  margin-left: 20px;
+}
+.debitnote-header-message div:first-child{
+  border-bottom: 1px solid #f2f2f2;
+}
+.debitnote-header-message div{
+  height: 80px;
+  line-height: 80px;
+}
+.debitnote-type-btn a{
+  border: 1px solid #333;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: underline;
+  border-radius: 10px;
+}
+.debitnote-header-btn a{
+  color: #333;
+  width: 48%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.debitnote-header-btn a i{
+  position: relative;
+  top: 6px;
+}
+.order-debitnote-type h3 ,.order-debitnote-header h3{
+  padding: 20px 0 0 20px;
+}
+.debitnote-type-ac{
+  border: 1px solid #d5393c !important;
+  color: #d5393c !important;
+}
+.debitnote-header-ac{
+
+}
+.icon-prototype{
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #e2e2e2;
+}
+.icon-active{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+
+}
+.order-debitnote-message{
+  background-color: #fff;
+}
+.order-debitnote-message ul li{
+  height: 80px;
+  line-height: 80px;
+  font-size: 30px;
+  color: #333;
+  margin-left: 30px;
+}
+.order-debitnote-message ul li input{
+  margin-left: 20px;
+  width: 530px;
+  font-size: 30px;
+}
+.order-debitnote-message ul li:nth-child(2){
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+.debitnote-header-message{
+  /*height: 2.2rem;*/
+}
+.debitnote-header-message input{
+  /*height: 80px;
+  line-height: 80px;*/
+}
+.order-debitnote-header{
+  height: auto;
+}
+/*.debitnote-header-message input:nth-child(1){
+  color: #bbbdc5;
+}
+.debitnote-header-message input:nth-child(2){
+  color: #d5393c;
+}*/
+input::-webkit-input-placeholder{
+  color:#666;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+  color:#666;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+  color:#666;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+  color:#666;
+}
+.debitnote-header-btn i img{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: -10px;
+
+}
+.debitnote-pic{
+  border-top: 20px solid #f0f2f5;
+}
+.debitnote-pic img{
+  width: 100%;
+}
+.debitnote-btn{
+  width: 690px;
+  height: 90px;
+  line-height: 90px;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  background-color: #c81a29;
+  border-radius:10px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.order-debitnote-header h3{
+  height: 90px;
+  line-height: 90px;
+  border-bottom: 1px solid #f2f2f2;
+  border-top: 20px solid #f0f2f5;
+  padding-top: 0;
+}
+.order-debitnote-header h3:first-child{
+  border-top: none;
+}
+/*.debitnote-header-btn a:last-child{
+  color: #d5d5d5;
+}
+.debitnote-header-btn a:last-child i{
+  border: 1px solid #d5d5d5;
+}*/
+.debitnote-header-btn a i{
+  margin-right: 10px;
+}
+

@@ -1,0 +1,164 @@
+.content{
+  height: 100%;
+}
+.forget-1{
+  height: 130px;
+  line-height: 130px;
+  font-size: 30px;
+  border-top: 1px solid #e2e2e2;
+  color: #333;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f2f2;
+}
+.forget-2{
+  height: 130px;
+  line-height: 130px;
+  font-size: 30px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  color: #333;
+  background-color: #fff;
+  padding-left: 134px;
+}
+.forget-2 a{
+  display: inline-block;
+  height: 100px;
+  line-height: 100px;
+  width: 226px;
+  font-size: 30px;
+  border-left: 1px solid #e2e2e2;
+  text-decoration: underline;
+  text-align: center;
+  color: #d5393c;
+}
+.forget-2 input{
+  width: 320px;
+}
+.forget-1 span{
+  padding-left: 20px;
+}
+.forget-1 input{
+  height: 100px;
+  line-height: 100px;
+  font-size: 30px;
+  width: 600px;
+  color: #333;
+  padding-left: 20px;
+}
+.forget-3-1{
+  height: 130px;
+  line-height: 130px;
+  font-size: 30px;
+  color: #333;
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f2f2;
+}
+.forget-3-1 span{
+  padding-left: 20px;
+}
+.forget-3-1 input{
+  height: 100px;
+  line-height: 100px;
+  font-size: 30px;
+  width: 100%;
+  color: #333;
+  border-bottom: 1px solid #e2e2e2;
+  padding-left: 20px;
+}
+.forget-3-1>div{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+.forget-3-1>div>img{
+  width: 100%;
+}
+.submitBtn{
+  width: 710px;
+  text-align: center;
+  margin-left: 20px;
+  font-size: 36px;
+  text-decoration: underline;
+  height: 90px;
+  line-height: 90px;
+  margin-top: 30px;
+  padding: 0;
+}
+
+
+.forget-3-1 input{
+  height: 100px;
+  width: 430px;
+  border-bottom: none;
+}
+
+
+.forget-3-2 input{
+  height: 44px;
+  width: 84%;
+}
+.forget-2-2 {
+  color: #666!important;
+}
+.icon-prototype{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+}
+.icon-active{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url("../../../assets/imgs/shopping_icon_active.png") no-repeat;
+}
+.agreement{
+  font-size: 30px;
+  margin-top: 20px;
+}
+.agreement i{
+  position: relative;
+  margin-left: 20px;
+  top: 5px;
+  margin-right: 20px;
+}
+.agreement span:nth-child(2){
+  color: #999;
+}
+.customer-service{
+  font-size: 30px;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+.customer-service span{
+  color: #999;
+}
+.customer-service a{
+  color: #333;
+  text-decoration: underline;
+}
+.login-nav{
+  height: 100px;
+  line-height: 100px;
+  padding-top: 30px;
+  margin-left: 20px;
+}
+.login-nav ul li{
+  float: left;
+  margin-right: 30px;
+  position: relative;
+  font-size: 36px;
+}
+.login-nav ul li:last-child:after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+}

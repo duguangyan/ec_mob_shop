@@ -1,0 +1,20 @@
+<!--<div class="header">
+  <span (click)="goback()"><img src="../../../../assets/imgs/arrows_left.png"></span> <h5>小鹿找料</h5>
+</div>-->
+<div class="content">
+  <div class="logo">
+    <img src="../../../assets/imgs/logo_big.png">
+  </div>
+  <div class="paysuccess-content">
+    <img src="../../../assets/imgs/paysuccess.png">
+    <p>您的订单已支付成功，我们会尽快找到您想要的物料,请耐心等待！</p>
+    <div class="payment-content">
+      <div><img src="../../assets/imgs/payment_icon_1.png" ><span>您的找料单号: {{id}}</span></div>
+      <div><img style="width: .25rem!important;" src="../../assets/imgs/payment_icon_2.png" ><span>本次找料服务费: {{ pay_fee |  number:'1.2-2'}}元</span></div>
+    </div>
+  </div>
+  <div class="order btn" (click)="goOrderListDetail()">
+    我的订单
+  </div>
+</div>
+<app-footer [select]="2"></app-footer>

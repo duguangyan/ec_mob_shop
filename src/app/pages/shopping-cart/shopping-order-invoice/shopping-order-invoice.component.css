@@ -1,0 +1,58 @@
+.order-invoice-content ul li{
+  height: 230px;
+  width: 750px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.order-invoice-content{
+  padding: 0 0 100px 0;
+}
+.order-invoice-pic,.order-invoice-messgae{
+  float: left;
+}
+.order-invoice-pic{
+  width: 180px;
+  height: 180px;
+  border-right: 10px ;
+  overflow: hidden;
+  padding-left: 20px;
+  position: relative;
+  top: 25px;
+}
+.order-invoice-pic img{
+  width: 100%;
+}
+.order-invoice-messgae{
+  width: 500px;
+  height: 180px;
+  padding: 20px 0 0px 20px;
+}
+.order-invoice-messgae h3{
+  font-size: 30px;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.order-invoice-messgae p:nth-child(2){
+  font-size: 24px;
+  color: #999;
+  margin-top: 10px;
+}
+.order-invoice-messgae p:nth-child(2) span{
+  padding-right: 20px;
+}
+.order-invoice-messgae p:nth-child(3){
+  font-size: 30px;
+  color: #333;
+  margin-top: 30px;
+}
+.order-invoice-messgae p:nth-child(3) .order-invoice-price{
+  color: #f23030;
+}
+.order-invoice-messgae p:nth-child(3) span:last-child{
+  float: right;
+  color: #999;
+  position: relative;
+  top: 5px;
+}

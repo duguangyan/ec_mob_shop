@@ -1,0 +1,86 @@
+.content{
+  margin-top: 0;
+}
+#appOrderListsPagination{
+  text-align: center;
+  margin-top: 30px;
+}
+.navs{
+  height: 100px;
+  padding: 0 10px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e2e2e2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.lists{
+  margin-top: 120px;
+}
+.navs ul li {
+  width: 25%;
+  text-align: center;
+  line-height: 100px;
+  float: left;
+  font-size: 24px;
+}
+.navs ul a{
+  color: #999;
+}
+.nav-active{
+  color: #333 !important;
+  text-decoration: underline;
+}
+.lists ul li {
+  line-height: 80px;
+  height: 80px;
+  margin-top: 20px;
+  border-bottom: 1px solid #e2e2e2;
+  background-color: #fafafa;
+  font-size: 24px;
+  color: #333;
+  padding-left: 10px;
+}
+.lists ul li span:nth-child(1){
+  float: left;
+  display: inline-block;
+  width: 30%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  padding-right: 10px;
+}
+.lists ul li span:nth-child(2){
+  float: left;
+  display: inline-block;
+  width: 25%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  padding-right: 10px;
+}
+.lists ul li span:nth-child(3){
+  float: left;
+  width: 20%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  padding-right: 10px;
+}
+.lists ul li span:nth-child(4){
+  float: right;
+  padding-right: 10px;
+}
+
+.noList{
+  text-align: center;
+  margin-top: 500px;
+}
+
+.noList p{
+  color: #aaaaaa;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+

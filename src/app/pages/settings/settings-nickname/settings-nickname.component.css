@@ -1,0 +1,37 @@
+.settings-nickname{
+
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.nickname-content{
+
+}
+.nickname-input{
+  height: 80px;
+  background-color: #fff;
+  border-top: 20px solid #f2f2f2;
+}
+.nickname-input input{
+  background-color: #fff;
+  border: none;
+  font-size: 30px;
+  padding-left: 30px;
+  line-height: 80px;
+  height: 80px;
+}
+.nickname-btn{
+  width: 690px;
+  margin-left: 30px;
+  height: 80px;
+  color: #666;
+  line-height: 80px;
+  text-align: center;
+  background-color: #cacaca;
+  font-size: 30px;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+.nickname-active{
+  background-color: #d5393c !important;
+  color: #fff;
+}

@@ -1,0 +1,41 @@
+<div class="product-search-list">
+  <div class="list-fixed">
+    <div class="index-search cf">
+      <div class="index-search-input cl" >
+        <div>
+          <img src="../../../assets/imgs/index_search_btn.png" alt="btn">
+          <form class="search-form" action="javascript:return true;">
+             <input type="search" name="search" placeholder="请输入要搜索的商品" (blur)="searchBtnbBlur()" (keypress)="keypressSearch($event)" [(ngModel)]="searchVal" />
+          </form>
+        </div>
+      </div>
+      <a class="index-search-btn" href="javascript:void(0);" (click)="search()">搜索</a>
+    </div>
+    <div class="list-nav cl">
+      <a class="list-nav-active" href="javascript:void(0);" >全部</a>
+      <a href="javascript:void(0);" data-n="1">价格 <i class="triangular1"></i><i class="triangular2"></i></a>
+      <a href="javascript:void(0);">筛选 <i class="triangular2"></i></a>
+    </div>
+    <div class="search-list-filtrate cl" >
+    <span *ngFor="let pro of propSelected">
+      <a href="javascript:void(0);" *ngFor="let p of pro.sub">{{p.text}}<i (click)="doFilter(pro.value)">x</i></a>
+    </span>
+    </div>
+  </div>
+  <div class="product-search-content">
+    <ul class="cl">
+      <li class="cl" *ngFor="let list of lists" (click)="goProductDetail(list.id)">
+        <img [src]="list.goods_img_url">
+        <p>{{list.sell_pt}}</p>
+        <p>￥{{list.shop_price}}</p>
+        <p>...</p>
+      </li>
+    </ul>
+  </div>
+  <div class="no-data" *ngIf="!isData">
+    <img src="../../../../../assets/imgs/shopping-order-list-1.png">
+    <p>暂无数据</p>
+  </div>
+  <div class="nodata" *ngIf="isData">已经全部加载完毕</div>
+</div>
+

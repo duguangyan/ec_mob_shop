@@ -1,0 +1,25 @@
+<div class="product-search">
+  <div class="index-search cf">
+    <div class="index-search-input cl" >
+      <div>
+        <img class="search-img" src="../../../assets/imgs/index_search_btn.png" alt="btn">
+        <form class="search-form" action="javascript:return true;">
+          <input type="text" name="search" placeholder="请输入要搜索的商品" (keypress)="keypressSearch($event)" [(ngModel)]="searchVal" />
+        </form>
+      </div>
+    </div>
+    <a class="index-search-btn" href="javascript:void(0);" (click)="search()">搜索</a>
+  </div>
+  <div class="product-search-history">
+    <span>最近搜索</span>
+  </div>
+  <div class="search-history-content">
+    <div *ngIf="!isHistory">暂无历史记录</div>
+    <ul *ngIf="isHistory">
+      <li *ngFor="let history of historyData" (click)="searchHistory(history)">{{history}}</li>
+    </ul>
+  </div>
+  <div class="clear-history" (click)="clearHistory()" *ngIf="isHistory">
+    <a href="javascript:void(0)">清除历史记录</a>
+  </div>
+</div>

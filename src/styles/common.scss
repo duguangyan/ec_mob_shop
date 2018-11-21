@@ -1,0 +1,58 @@
+.layui-m-layershade{
+  background-color: rgba(0,0,0,0);
+}
+.layui-layer-msg{
+  box-shadow: none;
+  background-color: #000!important;
+  color: #fff;
+  border-radius:10px;
+  border: none;
+  font-size: 24px;
+  /*width: 610px !important;
+  left: 70px !important;*/
+}
+
+.layui-layer-dialog .layui-layer-content{
+  font-size: 30px;
+  /* padding: 40px 80px; */
+  line-height: 40px;
+  /* width: 700px; */
+  text-align: center;
+  padding: 20px 40px;
+  border-radius:10px ;
+}
+.layui-layer-dialog,.layui-layer-content{
+  font-size: 30px!important;
+  text-align: center!important;
+  border-radius: 10px;
+}
+.layui-layer-content .layui-layer-ico{
+  display: none;
+}
+.layui-layer-dialog .layui-layer-content .layui-layer-ico{
+  top: 37%;
+  left: 10%;
+}
+.layui-layer-ico{
+  display: none;
+}
+.ellipsis{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
+.layui-layer-content i{
+  display: none;
+}
+.weui-dialog{
+  max-width: 400px !important;
+}
+.weui-dialog__title{
+  font-size: 30px;
+}
+.weui-dialog__bd{
+  font-size: 24px;
+}
+.weui-dialog__ft{
+  font-size: 24px;
+}

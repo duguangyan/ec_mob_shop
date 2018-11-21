@@ -1,0 +1,86 @@
+<div class="home-product-details" [ngClass]="{'filter':isChecked}">
+  <div class="swiper">
+    <app-swiper [imgs]="swiperImgs"></app-swiper>
+   <!-- <div class="swiper-btn">
+      <div (click)="goBack()"><img src="../../../../assets/imgs/arrows_left_big.png" alt="左箭头"></div>
+      <div (click)="shoppingCart()"><img src="../../../../assets/imgs/shoping_cart.png" alt="购物车"></div>
+    </div>-->
+  </div>
+  <div class="product-content">
+    <div class="content-message">
+      <h3>{{sell_pt}}</h3>
+      <p>品名编号: <span>{{product_sn}}</span></p>
+      <p>参考价:<span>￥{{shop_price}}</span>/{{unit_name}}</p>
+    </div>
+    <div class="content-information">
+      <span>运费 待定</span>
+      <span>成交 100单</span>
+      <span>发货 广东广州市</span>
+    </div>
+    <div class="content-number choose-number" (click)="showNumber()">
+      <a href="javascript:void(0);">颜色、数量</a>
+      <img src="../../../../assets/imgs/arrows_right.png" alt="箭头">
+    </div>
+    <div class="content-number" (click)="goProductPicShow()">
+      <a href="javascript:void(0);" >详情</a>
+      <img src="../../../../assets/imgs/arrows_right.png" alt="箭头">
+    </div>
+  </div>
+</div>
+<div class="product-footer">
+  <a href="javascript:void(0);" (click)="shoppingCart()"><img src="../../../../assets/imgs/shopping-cart.png" alt="购物车"> <p>购物车</p><span *ngIf="shoppingCartNumber!=0">{{shoppingCartNumber}}</span></a>
+  <a href="javascript:void(0);" (click)="goProductDemand()">索样</a>
+  <a href="javascript:void(0);" (click)="showNumber()">加入购物车</a>
+</div>
+<!--<app-footer [select]="1"></app-footer>-->
+
+<!--选择图片和数量-->
+<div class="home-product-amount" *ngIf="isChecked">
+  <div class="backdrop" (click)="close()"></div>
+  <div class="product-amount-content" @upIn @upOut>
+    <div class="amount-content-title">
+      <img [src]="goods_img_url" alt="详情图片">
+      <div>
+        <h3>{{sell_pt}}</h3>
+        <span>{{shop_price}} / {{unit_name}}</span>
+      </div>
+      <img src="../../../../assets/imgs/closes_btn_1.png" alt="关闭按钮" (click)="close()">
+    </div>
+    <div class="amount-choose-list" *ngFor="let sale of sale_props; let i = index;" >
+      <div *ngIf="i != sale_props_length">
+        <div class="amount-choose-color">
+          {{sale.text}}
+        </div>
+        <div class="amount-choose-btn cl">
+          <!-- <span class="amount-choose-btn-active">白色95#</span>-->
+          <span *ngFor="let option of sale.option" [ngClass]="{'amount-choose-btn-active':checkString == option.value}" (click)="doCheck($event)">{{option.text}} <i style="display: none;">{{option.value}}</i></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="amount-choose-title">
+      已添加得到产品
+    </div>
+    <div class="amount-choose-content">
+      <ul>
+        <li class="cl" *ngFor="let s of skus" [ngClass]="{'displayNone':!(checkString != '' && s.sale_props.indexOf(checkString)>-1)}">
+            <span>{{s.sale_props_str.split(':').pop()}}</span>
+            <span class="cl">
+              <em class="subtract" (click)="subduction($event,s.cat_id)">-</em>
+              <input type="tel" class="quantity" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');"  size="4" value="1" >
+              <em class="plusign" (click)="addition($event,s.cat_id)">+</em>
+            </span>
+            <span>￥{{s.shop_price}} / {{s.unit_name}}</span>
+            <span (click)="doSuccess($event,s.id)"><img src="../../../../assets/imgs/product_detail_icon_1.png" alt="加入购物车"></span>
+
+        </li>
+      </ul>
+    </div>
+    <!--<div class="amount-choose-title">
+      <span>采购数量: <em>30码</em></span> <span>合计: <em>￥96.00</em></span>
+    </div>-->
+    <div class="amount-add-cart" (click)="close()">
+      确定
+    </div>
+  </div>
+</div>

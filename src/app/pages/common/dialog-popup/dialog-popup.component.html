@@ -1,0 +1,12 @@
+<div class="dialog-popup">
+  <div class="mask-layer"></div>
+  <div class="popup-content" @upIn @upOut>
+    <div class="popup-title">
+      {{msg}}
+    </div>
+    <div class="popup-btn">
+      <a href="javascript:void(0);" (click)="close()">取消</a>
+      <a href="javascript:void(0);" (click)="doOK()">确定</a>
+    </div>
+  </div>
+</div>

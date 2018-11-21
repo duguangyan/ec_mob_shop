@@ -1,0 +1,56 @@
+.dialog-multiple{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+}
+.mask-layer{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: .7;
+}
+.multiple-content{
+  border-radius: 30px;
+  width: 710px;
+  overflow: hidden;
+  z-index: 9999999;
+  position: absolute;
+  bottom: 160px;
+  text-align: center;
+  margin-left: 20px;
+}
+.multiple-content ul li {
+  height: 120px;
+  line-height: 120px;
+  width: 100%;
+  background-color: #fff;
+  font-size: 40px;
+  color: #007aff;
+  border-bottom: 1px solid #e2e2e2;
+}
+.multiple-content ul li:first-child{
+  height: 90px;
+  line-height: 90px;
+  font-size: 24px;
+  color: #999;
+}
+.multiple-content ul li:last-child{
+  border-bottom: none;
+}
+.multiple-close{
+  height: 120px;
+  line-height: 120px;
+  background-color: #fff;
+  color: #007aff;
+  font-size: 40px;
+  position: fixed;
+  bottom: 20px;
+  width: 710px;
+  margin-left: 20px;
+  border-radius: 30px;
+  text-align: center;
+}

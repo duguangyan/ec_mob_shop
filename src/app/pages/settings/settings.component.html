@@ -1,0 +1,48 @@
+<div class="content">
+  <div *ngIf="!isLogin" class="setting" (click)="login()">
+    <img src="{{HeaderImgUrl}}" ><span >您暂未登录(点击登录)</span><span></span>
+  </div>
+  <div *ngIf="isLogin" class="setting">
+    <img src="{{HeaderImgUrl}}" ><span  (click)="goSettingsMessage()">{{userName}}</span><img src="../../../assets/imgs/settings-icon-1.png" (click)="goSettingsMessage()" alt="图标"><img (click)="goSettingsCenter()" src="../../../assets/imgs/setting-icon-13.png" alt="图标">
+  </div>
+
+  <div class="settings-list">
+    <div class="settings-more">
+      <span>我的订单</span> <strong (click)="goMoreOrderList()"> 查看全部订单 <img src="../../../assets/imgs/arrows_right.png"></strong>
+    </div>
+    <div class="settings-status">
+      <ul class="cl">
+        <li (click)="goOrderList(1)"><img src="../../../assets/imgs/setting-icon-1.png" alt="图标"><p>待审核</p></li>
+        <li (click)="goOrderList(2)"><img src="../../../assets/imgs/setting-icon-2.png" alt="图标"><p>待付款</p></li>
+        <li (click)="goOrderList(3)"><img src="../../../assets/imgs/setting-icon-3.png" alt="图标"><p>待发货</p></li>
+        <li (click)="goOrderList(4)"><img src="../../../assets/imgs/setting-icon-4.png" alt="图标"><p>已完成</p></li>
+      </ul>
+    </div>
+  </div>
+  <!--<div class="settings_address">
+    <div class="settings-more">
+      <img src="../../../assets/imgs/settings_dizhi.png"><span>我的地址</span>&lt;!&ndash;<img src="../../../assets/imgs/arrows_right.png">&ndash;&gt;
+    </div>
+    <div class="address">
+      广东省广州市花都区镜湖大道南33号
+    </div>
+  </div>-->
+
+  <div class="settings_service">
+    <ul class="cl">
+      <li (click)="goFindList()"><img src="../../../assets/imgs/setting-icon-5.png"> <p>我的找料</p></li>
+      <li><img src="../../../assets/imgs/setting-icon-6.png"> <p>我的索样</p></li>
+      <li><img src="../../../assets/imgs/setting-icon-7.png"> <p>找料券</p></li>
+      <li><img src="../../../assets/imgs/setting-icon-8.png"> <p>增票资质</p></li>
+      <li><img src="../../../assets/imgs/setting-icon-9.png"> <p>收藏</p></li>
+      <li (click)="goShoppingOrderAddress()"><img src="../../../assets/imgs/setting-icon-10.png"> <p>收货地址</p></li>
+      <li><img src="../../../assets/imgs/setting-icon-11.png"> <p>客服</p></li>
+      <li><img src="../../../assets/imgs/setting-icon-12.png"> <p>帮助</p></li>
+    </ul>
+  </div>
+
+  <!--<div class="logout btn" (click)="logout()" *ngIf="isLogin">退出登录</div>-->
+</div>
+
+<app-footer [select]="4"></app-footer>
+

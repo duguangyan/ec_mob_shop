@@ -1,0 +1,75 @@
+<div class="recharge-list">
+  <div class="recharge-li cl">
+    <h3>按月充值套餐 <img src="../../../../assets/imgs/recharge-icon-2.png" alt="图标" (click)="checkRechargeMonth()"></h3>
+    <ul class="cl">
+      <li [ngClass]="{'recharge-li-active':listMonthIndex === i}" (click)="checkActiveMonthIndex(i,m.id)"  *ngFor="let m of month;let i=index;">
+        <p>{{m.mounth}}个月</p>
+        <p>(<span>￥{{m.pay_price|number:'1.1-2'}}</span>)</p>
+        <img *ngIf="listMonthIndex === i" src="../../../../assets/imgs/recharge-icon-1.png" alt="图标">
+        <span class="recharge-discount">{{m.discount|number:'1.1-2'}}折</span>
+      </li>
+    </ul>
+  </div>
+  <div class="recharge-li cl">
+    <h3>按次充值套餐 <img src="../../../../assets/imgs/recharge-icon-2.png" alt="图标" (click)="checkRechargeNumber()"></h3>
+    <ul class="cl">
+      <li [ngClass]="{'recharge-li-active':listNumberIndex === i}" (click)="checkActiveNumberIndex(i,t.id)"  *ngFor="let t of time;let i=index;">
+        <p>{{t.name}}</p>
+        <p>(<span>￥{{t.pay_price}}</span>)</p>
+        <img *ngIf="listNumberIndex === i" src="../../../../assets/imgs/recharge-icon-1.png" alt="图标">
+        <span *ngIf="t.discount != '0'" class="recharge-discount">{{t.discount| number:'1.1-2'}}折</span>
+      </li>
+    </ul>
+  </div>
+  <div class="recharge-li recharge-invoice cl" (click)="goShoppingOrderDebitnote()">
+    <h3>开具发票 <span>{{rechargeMessage}}</span><img src="../../../../assets/imgs/arrows_right.png" alt="图标"></h3>
+  </div>
+  <div class="recharge-li cl">
+    <h3>选择支付方式</h3>
+    <ol>
+
+      <li (click)="doCheckPayment(1)">
+        <img src="../../../../assets/imgs/paydo_icon_3.png" alt="微信"><span>微信</span>
+        <img src="../../../../assets/imgs/shopping_icon_active.png" *ngIf="payIndex == 1" alt="图标">
+        <img src="../../../../assets/imgs/shopping_icon.png" *ngIf="payIndex != 1" alt="图标">
+      </li>
+      <li (click)="doCheckPayment(2)">
+        <img src="../../../../assets/imgs/paydo_icon_2.png" alt="支付宝"><span>支付宝</span>
+        <img src="../../../../assets/imgs/shopping_icon_active.png"  *ngIf="payIndex == 2" alt="图标" >
+        <img src="../../../../assets/imgs/shopping_icon.png" *ngIf="payIndex != 2" alt="图标">
+      </li>
+    </ol>
+  </div>
+  <div class="recharge-footer" id="WXPAY" (click)="goRecharge()">
+    立即充值
+  </div>
+  <div class="recharge-footer" id="ZFBPAY" >
+
+  </div>
+  <div style="height: 100px"></div>
+</div>
+
+<div class="recharge-month" *ngIf="isRechargeMonth">
+  <div class="month-bg" (click)="checkRechargeMonth()"></div>
+  <div class="month-content">
+    <h3>按月套餐详情</h3>
+    <p>1.按月充值套餐可享受相应折扣，充值成功后，次日开始生效；<br>
+      2.月套餐根据充值金额，分别享受60次、90次、140次找料及代买样板服务；<br>
+      3.超过有效期，用户需重新购买套餐，否则将按每次发布找料需
+      求实际需支付金额支付。
+    </p>
+  </div>
+</div>
+
+<div class="recharge-month" *ngIf="isRechargeNumber">
+  <div class="month-bg" (click)="checkRechargeNumber()"></div>
+  <div class="month-content">
+    <h3>按次套餐详情</h3>
+    <p>1.按次充值套餐可享受相应折扣，最低充值12次；<br>
+      2.按次充值无时间限制，每发布一次找料需求将扣件次数，直至
+      扣完；<br>
+      3.充值次数为0时，用户需重新购买套餐，否则将按每次发布找料
+      需求实际需支付金额支付。
+    </p>
+  </div>
+</div>

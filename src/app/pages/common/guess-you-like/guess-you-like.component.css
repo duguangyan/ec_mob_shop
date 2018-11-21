@@ -1,0 +1,84 @@
+.guess-you-like-title{
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  position: relative;
+  background-color: #f2f2f2;
+}
+.guess-you-like-title:after{
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #e2e2e2;
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+.guess-you-like-title div{
+  position: relative;
+  z-index: 99;
+  background-color: #f2f2f2;
+  width: 240px;
+  margin: 0 auto;
+}
+.guess-you-like-title div span{
+  position: relative;
+  top: 4px;
+  left: 10px;
+}
+.filtrate-detail-content{
+  background-color: #fff;
+}
+.filtrate-detail-content ul li{
+  height: 540px;
+  width: 370px;
+  float: left;
+  margin-bottom: 10px;
+  /* border-bottom: 10px solid #eee;*/
+  box-shadow: 0 8px 4px 0 rgba(0,0,0,.05);
+}
+.filtrate-detail-content ul li:nth-child(odd){
+  border-right: 10px solid #eee;
+}
+.filtrate-detail-content ul li img{
+  width: 370px;
+}
+.filtrate-detail-content ul li p{
+  font-size: 30px;
+  margin-top: 10px;
+  margin: 0 20px;
+}
+.filtrate-detail-content ul li p:nth-child(2){
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.filtrate-detail-content ul li p:nth-child(3){
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+  padding-top: 20px;
+
+}
+.price{
+  color: #ff7300;
+  float: left;
+}
+.address{
+  font-size: 24px;
+  color: #888888;
+  float: right;
+}
+.nodata{
+  text-align: center;
+  height: 90px;
+  line-height: 90px;
+  font-size: 28px;
+  color: #bcbcbc;
+}

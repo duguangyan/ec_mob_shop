@@ -1,0 +1,35 @@
+<div class="wx-payment-callback">
+  <div class="header">
+    <span (click)="goBack()"><img src="../../../../assets/imgs/arrows_left_white.png"></span><h5>关联账号</h5>
+  </div>
+
+  <div class="payment-callback-content">
+    <ul>
+      <li>
+        <span>手机号</span>
+        <input type="text" placeholder="请输入11位手机号" [(ngModel)]="phone" (keyup)="submitKeyUp()">
+      </li>
+      <li>
+        <span>验证码</span>
+        <input type="text" placeholder="请输入验证码" [(ngModel)]="code" (keyup)="submitKeyUp()">
+        <span *ngIf="isSends" (click)="getMsgCode()">{{codeMsg}}</span>
+        <span [ngClass]="{'sendActive':!isSends}" *ngIf="!isSends">{{sends}}s</span>
+      </li>
+      <li *ngIf="isRegister">
+        <span>设置密码</span>
+        <input *ngIf="!isPassWordShow" type="text" placeholder="6-20位字母+数字或符号组合" [(ngModel)]="passWord" (keyup)="submitKeyUp()">
+        <input *ngIf="isPassWordShow" type="password" placeholder="6-20位字母+数字或符号组合" [(ngModel)]="passWord" (keyup)="submitKeyUp()">
+        <img *ngIf="!isPassWordShow" src="../../assets/imgs/close_password.png" (click)="passWordShow()">
+        <img *ngIf="isPassWordShow" src="../../assets/imgs/open_password.png" (click)="passWordShow()">
+      </li>
+    </ul>
+
+    <div *ngIf="!isRegister" class="callback-btn" (click)="relevance()">
+      立即关联账号
+    </div>
+    <div *ngIf="isRegister" class="callback-btn" (click)="register()">
+      注册并关联账号
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,89 @@
+<div class="shopping-order-list">
+  <!--<app-header (parentGoBack)="goBack()"  [title]="title" ></app-header>-->
+  <div class="order-list-content">
+    <div class="order-list-nav">
+      <ul class="cl">
+        <li *ngFor="let l of listNav;let i=index" [ngClass]="{'list-nav-active':listNavIndex == i}" (click)="checkListNav(i)">{{l}} <i *ngIf="listNavIndex == i"></i></li>
+      </ul>
+    </div>
+    <div class="order-list-content">
+      <div class="order-list-nodata" *ngIf="false">
+        <img src="../../../../assets/imgs/shopping-order-list-1.png" alt="图标">
+        <p>您还没有相关订单</p>
+      </div>
+
+      <div class="order-list-detail">
+        <ul>
+          <li *ngFor="let item of orderListData">
+            <div class="order-list-detail-title cl" (click)="goOrderDetail(item.id)">
+              <span>{{item.shop_name}} <img src="../../../../assets/imgs/arrows_right.png" alt="箭头"></span> <span class="active-color" *ngIf="item.status=='2'">等待付款</span><span class="active-color" *ngIf="item.status=='1'">待审核</span><span *ngIf="item.status==0">已取消</span>
+            </div>
+            <div class="order-list-detail-pic" (click)="goOrderDetail(item.id)">
+              <img *ngFor="let g of item.goods.slice(0,3)" [src]="g.goods_img_url" onerror="this.style.display='none'" alt="图标">
+            </div>
+            <div class="order-list-detail-price" (click)="goOrderDetail(item.id)">
+              <p>共{{item.goods_numbers}}件 需付款: <span>￥{{(item.order_amount).split('.')[0]}}.<em style="font-size: 24px">{{(item.order_amount).split('.')[1]}}</em></span></p>
+            </div>
+            <div class="order-list-detail-btn" *ngIf="item.status != 0">
+              <div *ngIf="item.status == '2'">
+                <a href="javascript:void(0);" (click)="cancelOrder(item.id,2)">取消订单</a>
+                <a href="javascript:void(0);" class="active-color" (click)="payOrder(item.id,item.order_amount,item.order_sn)">去支付</a>
+              </div>
+              <div *ngIf="item.status == '1'">
+                <a href="javascript:void(0);" (click)="cancelOrder(item.id,0)">取消订单</a>
+              </div>
+              <div *ngIf="item.status == '3'">
+                <a href="javascript:void(0);" (click)="payAgain(item.id)">确认收货</a>
+              </div>
+              <!--<div *ngIf="item.status == 4">
+                <a href="javascript:void(0);" (click)="delOrder()">删除订单</a>
+              </div>-->
+              <!--<div *ngIf="item.status == 0">
+                <a style="color: #999" href="javascript:void(0);">已取消</a>
+              </div>-->
+              <div *ngIf="false">
+                <a href="javascript:void(0);">再次购买</a>
+                <a href="javascript:void(0);">查看物流</a>
+              </div>
+            </div>
+          </li>
+
+          <!--<li>
+            <div class="order-list-detail-title cl">
+              <span>一大批有限公司 <img src="../../../../assets/imgs/arrows_right.png" alt="箭头"></span> <span class="active-color">等待付款</span>
+            </div>
+            <div class="order-list-detail-pic">
+              <img src="../../../../assets/imgs/order-message-icon-1.png" alt="图标">
+              <img src="../../../../assets/imgs/order-message-icon-1.png" alt="图标">
+            </div>
+            <div class="order-list-detail-price">
+              <p>共20件 需付款: <span>￥460.00</span></p>
+            </div>
+            <div class="order-list-detail-btn">
+              <div *ngIf="false">
+                <a href="javascript:void(0);" (click)="delOrder()">取消订单</a>
+                <a href="javascript:void(0);" >去支付</a>
+              </div>
+              <div>
+                <a href="javascript:void(0);">再次购买</a>
+                <a href="javascript:void(0);" (click)="goFindTransportation()">查看物流</a>
+              </div>
+            </div>
+          </li>-->
+        </ul>
+
+      </div>
+      <div class="nodata-img" *ngIf="noData">
+        <img src="../../../../assets/imgs/shopping-order-list-11.png" >
+        <p>您还没有相关订单</p>
+      </div>
+      <div class="nodata" *ngIf="!noData">
+        已经全部加载完毕
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--取消订单弹窗-->
+<app-dialog-multiple *ngIf="isDelOrder" [multipleList]="multipleList" (parentMultiple)="multiple($event)"></app-dialog-multiple>

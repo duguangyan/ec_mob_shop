@@ -1,0 +1,25 @@
+<!--<div class="header">
+  <span (click)="goback()"><img src="../../../../assets/imgs/arrows_left.png"></span> <h5>小鹿找料</h5>
+</div>-->
+<div class="content">
+  <div class="navs">
+    <ul>
+      <li *ngFor="let o of navs; let i = index">
+        <a [ngClass]="{'nav-active':navNumber === i}" (click)="checkNavs(i)" href="javascript:void(0)"><span>{{o}}</span><!--(<span>{{navOrders[i]}}</span>)--></a>
+      </li>
+      <div style="clear: both"></div>
+    </ul>
+  </div>
+  <div class="lists">
+    <ul>
+      <li *ngFor="let list of lists" (click)="goListDetail(list.id)"><span>{{list.id}}</span> <span>{{list.field_desc}}</span> <span>{{list.statusvalue}}</span>  <span>详情 >></span> <div style="clear: both"></div></li>
+      <!--<li  *ngIf="lists.length>0" style="text-align: center">数据已加载完毕</li>-->
+    </ul>
+  </div>
+  <div *ngIf="lists.length>0" id="appOrderListsPagination"></div>
+  <div class="noList" *ngIf="lists.length<=0">
+    <img src="../../../../assets/imgs/list_nodata.png">
+    <p>没有相关订单哦</p>
+  </div>
+</div>
+<app-footer [select]="4"></app-footer>

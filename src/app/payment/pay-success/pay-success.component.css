@@ -1,0 +1,50 @@
+.logo img{
+  width: 300px;
+  position: relative;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: 100px;
+}
+.content{
+  background-color: #fff;
+  height: 100%;
+}
+.payment-content img{
+  width: 20px;
+}
+.payment-content{
+  margin-left: 100px;
+  font-size: 24px;
+  color: #666;
+  text-align: left;
+  margin-top: 30px;
+}
+.payment-content span{
+  margin-left: 10px;
+}
+.payment-content div:nth-child(2) span{
+  color: #333;
+}
+.payment-content div:nth-child(2){
+  margin-top: 10px;
+}
+.paysuccess-content{
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+}
+.payment-content img{
+  width: 20px !important;
+  margin-bottom: 0 !important;
+  position: relative !important;
+}
+.paysuccess-content img{
+  width: 150px;
+  margin-bottom: 20px;
+}
+.order{
+  display: block;
+  width: 140px;
+  margin: 0 auto;
+  margin-top: 50px;
+}

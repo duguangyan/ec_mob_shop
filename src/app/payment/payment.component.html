@@ -1,0 +1,23 @@
+<!--<div class="header">
+  <span (click)="goback()"><img src="../../../../assets/imgs/arrows_left.png"></span> <h5>小鹿找料</h5>
+</div>-->
+<div class="content">
+  <div class="payment-logo">
+    <img src="../../assets/imgs/payment-logo.png" (click)="goRecharge()">
+  </div>
+  <div class="payment-content">
+    <div><img src="../../assets/imgs/payment_icon_1.png" ><span>您的找料单号: {{queryParams.id}}</span></div>
+    <div><img src="../../assets/imgs/payment_icon_2.png" ><span>本次找料服务费: {{ queryParams.pay_fee |  number:'1.2-2'}}元</span></div>
+  </div>
+  <div></div>
+  <div *ngIf="queryParams.pay_fee != '0'" class="goPay btn" (click)="goPayDoing()">
+    去支付
+  </div>
+  <div *ngIf="queryParams.pay_fee === '0'" class="goPay btn" (click)="goDetail(queryParams.id)">
+    去详情
+  </div>
+  <div class="pay-footer-icon">
+    <img src="../../assets/imgs/payment_kouhao.png">
+  </div>
+</div>
+<app-footer [select]="2"></app-footer>

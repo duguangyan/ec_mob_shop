@@ -1,0 +1,140 @@
+shopping-order-online-payment{
+  height: 100%;
+  background-color: #f0f0f0;
+}
+.online-payment-content{
+  padding:0 0 100px 0;
+
+}
+.online-payment-content ul li{
+  height: 90px;
+  line-height: 90px;
+  border-bottom: 1px solid #e2e2e2;
+  background-color: #fff;
+  padding-left: 20px;
+  color: #333;
+}
+.online-payment-footer{
+  position: fixed;
+  bottom: 0;
+  width: 750px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  background-color: #d5393c;
+  font-size: 30px;
+}
+.online-payment-content{
+  font-size: 30px;
+}
+.online-payment-content ul li:first-child span:first-child{
+  float: left;
+  font-size: 30px;
+}
+.online-payment-content ul li:first-child span:last-child{
+  float: right;
+  padding-right: 20px;
+  color: #d5393c;
+}
+.online-payment-content ul:nth-child(1) li:nth-child(3){
+  font-size: 24px;
+  background-color: #f0f0f0;
+}
+.icon-prototype{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+}
+.icon-active{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url("../../../../assets/imgs/shopping_icon_active.png") no-repeat;
+}
+.online-payment-content ul li:nth-child(4),.online-payment-content ul li:nth-child(5),.online-payment-content ul li:nth-child(6){
+  height: 120px;
+  line-height: 120px;
+}
+.online-payment-content ul li img{
+  margin-right: 30px;
+  position: relative;
+  top: -2px;
+}
+.online-payment-content ul li i{
+  float: right;
+  margin-right: 30px;
+  position: relative;
+  top: 30px;
+}
+
+
+/*弹窗*/
+.dialog-popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+}
+.mask-layer{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: .7;
+}
+.popup-content{
+  width: 540px;
+  height: 240px;
+  left: 105px;
+  top: 40%;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  font-size: 30px;
+}
+.popup-title{
+  height: 120px;
+  width: 90%;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 30px;
+  padding: 0 5%;
+}
+.popup-btn{
+  border-top: 1px solid #e2e2e2;
+}
+.popup-btn a{
+  display: inline-block;
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 90px;
+
+}
+.popup-btn a:last-child{
+  background-color: #f23030;
+  color: #fff;
+  text-decoration: underline;
+}
+.popup-title span{
+  color: #f23030;
+}
+
+
+#ZFBPAY{
+  display: none;
+  width: 100%;
+  z-index: 9999;
+}
+.J-btn-submit{
+  width: 100%;
+  padding:0 !important;
+}

@@ -1,0 +1,25 @@
+<div class="product-pic-show">
+  <div class="pic-show-header cl">
+    <img src="../../../../../assets/imgs/arrows_left.png" (click)="goBack()" alt="左箭头">
+    <a *ngFor="let nav of headerNav;let i = index;" [ngClass]="{'headerActive':i == hIndex}" (click)="headerNavCheck(i)" href="javascript:void(0);">{{nav}}</a>
+  </div>
+  <div class="pic-show-content-0" *ngIf="hIndex===0">
+    <span>图片载入中...</span>
+    <!--<img [src]="goods_desc" onerror="this.style.display='none'">-->
+    <!--<a href="javacript:voi(0);">加入购物车</a>-->
+  </div>
+  <div class="pic-show-content-1" *ngIf="hIndex===1">
+    <div class="pic-show-content-p">
+      <p *ngFor="let p of binds_str">{{p.name}}: {{p.value}}</p>
+     <!-- <p>材&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;质: 湿法PU</p>
+      <p>底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;布: 牛(水刺)无纺布</p>
+      <p>厚&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度: 0.6mm</p>
+      <p>特殊工艺: 压变/变色</p>
+      <p class="show-content-describe"><span>产品描述:</span> <span>adad阿萨大大阿萨大大</span></p>-->
+    </div>
+   <!-- <a href="javacript:voi(0);">加入购物车</a>-->
+  </div>
+  <div class="pic-show-content-2" style="font-size: 30px;text-align: center;" *ngIf="hIndex===2">
+    暂无
+  </div>
+</div>

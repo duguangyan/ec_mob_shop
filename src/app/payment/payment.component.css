@@ -1,0 +1,35 @@
+.content{
+  margin-top: 0;
+}
+.payment-logo img{
+  position: relative;
+}
+.payment-content img{
+  width: 20px;
+}
+.payment-content{
+  margin-left: 140px;
+  font-size: 24px;
+  color: #666;
+  margin-top: 60px;
+}
+.payment-content span{
+  margin-left: 10px;
+}
+.payment-content div:nth-child(2) span{
+  color: #333;
+}
+.payment-content div:nth-child(2){
+  margin-top: 10px;
+}
+.goPay{
+  margin: 0 auto;
+  display: block;
+  width: 100px;
+  margin-top: 80px;
+}
+.pay-footer-icon img{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 100px;
+}

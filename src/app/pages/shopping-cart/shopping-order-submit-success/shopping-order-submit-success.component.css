@@ -1,0 +1,40 @@
+.submit-success img{
+  width: 90px;
+  height: 90px;
+  margin-top: 100px;
+}
+.submit-success{
+  text-align: center;
+  color: #333;
+}
+.submit-success p{
+  margin-top: 20px;
+}
+.submit-success p:nth-child(2){
+  font-size: 30px;
+}
+.submit-success p:nth-child(3){
+  font-size: 24px;
+}
+.success-btn {
+  height: 80px;
+  margin-top: 150px;
+}
+.success-btn a{
+  width: 314px;
+  height: 80px;
+  display: block;
+  float: left;
+  font-size: 30px;
+  color: #fff;
+  line-height: 80px;
+  border-radius: 5px;
+  margin: 0 30px;
+}
+.success-btn a:nth-child(1){
+  background-color: #c81a29;
+}
+.success-btn a:nth-child(2){
+  border: 1px solid #666;
+  color: #666;
+}

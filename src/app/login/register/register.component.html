@@ -1,0 +1,43 @@
+<!--<app-header [title]="title" (parentGoBack)="goBack()"></app-header>-->
+<div class="content">
+
+  <div class="login-nav">
+    <ul>
+      <li (click)="goLogin()">登录账号</li>
+      <li>注册账号</li>
+    </ul>
+  </div>
+  <div class="forget-1">
+    <span>手机号</span><input type="text" (change)="phoneChange()" [(ngModel)]="phone" placeholder="输入手机号">
+  </div>
+  <div class="forget-2">
+    <input type="text" (change)="codeChange()" [(ngModel)]="code" placeholder="输入验证码">
+    <a class="forget-2-1" *ngIf="isSends && !isChenckShow" href="javascript:void(0)" (click)="getMsgCode()">{{codeMsg}}</a>
+    <a class="forget-2-1" *ngIf="isSends && isChenckShow" href="javascript:void(0)">{{codeMsg}}</a>
+    <a class="forget-2-2" *ngIf="!isSends" href="javascript:void(0)">{{sends}}s</a>
+  </div>
+  <div class="forget-3">
+    <div class="forget-3-1" *ngIf="isPassWordShow">
+      <span>设置密码</span> <input type="password" (change)="passWordValChange()" [(ngModel)]="passWordVal" placeholder="6-18位字母+数字或符号组合">
+      <div (click)="passWordShow()">
+        <img src="../../../assets/imgs/close_password.png" >
+      </div>
+
+    </div>
+    <div class="forget-3-1" *ngIf="!isPassWordShow">
+      <span>设置密码</span> <input type="text" (change)="passWordValChange()" [(ngModel)]="passWordVal" placeholder="6-18位字母+数字或符号组合">
+      <div (click)="passWordShow()">
+        <img src="../../../assets/imgs/open_password.png" >
+      </div>
+    </div>
+    <div class="agreement" >
+        <i [ngClass]="{'icon-active':!isAgree,'icon-prototype':isAgree}" (click)="agreeTodo()"></i><span (click)="agreeTodo()">同意</span> <span (click)="goLoginProtocol($event)">《一大批用户服务协议》</span>
+    </div>
+  </div>
+  <div class="submitBtn btn" (click)="register()">提交</div>
+  <div class="customer-service">
+    <span>注册遇到问题？</span>
+    <a href="tel:400-8088-156">联系客服</a>
+  </div>
+</div>
+<!--<app-footer [select]="3"></app-footer>-->

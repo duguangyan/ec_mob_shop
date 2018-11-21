@@ -1,0 +1,111 @@
+.home-header{
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+}
+.filtrate-detail-content{
+  padding-top: 100px;
+}
+.filtrate-detail-content ul li{
+  height: 540px;
+  width: 370px;
+  float: left;
+  margin-bottom: 10px;
+ /* border-bottom: 10px solid #eee;*/
+  box-shadow: 0 8px 4px 0 rgba(0,0,0,.05);
+}
+.filtrate-detail-content ul li:nth-child(odd){
+  border-right: 10px solid #eee;
+}
+.filtrate-detail-content ul li img{
+  width: 370px;
+  height: 370px;
+}
+.filtrate-detail-content ul li p{
+  font-size: 30px;
+  margin-top: 10px;
+  margin: 0 20px;
+}
+.filtrate-detail-content ul li p:nth-child(2){
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.filtrate-detail-content ul li p:nth-child(3){
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+  padding-top: 10px;
+
+}
+.price{
+  color: #ff7300;
+  float: left;
+}
+.address{
+  font-size: 24px;
+  color: #888888;
+  float: right;
+}
+.nodata{
+  text-align: center;
+  height: 90px;
+  line-height: 90px;
+  font-size: 28px;
+  color: #bcbcbc;
+}
+
+
+
+.dropload-up,.dropload-down{
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  font-size: 12px;
+  /* 开启硬件加速 */
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
+}
+.dropload-down{
+  height: 50px;
+}
+.dropload-refresh,.dropload-update,.dropload-load,.dropload-noData{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.dropload-load .loading{
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  margin: 6px;
+  border: 2px solid #666;
+  border-bottom-color: transparent;
+  vertical-align: middle;
+  -webkit-animation: rotate 0.75s linear infinite;
+  animation: rotate 0.75s linear infinite;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

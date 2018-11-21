@@ -1,0 +1,24 @@
+<div class="shopping-order-payment-success">
+  <div class="payment-success-header">
+    订单支付成功
+    <a href="javascript:void(0);" (click)="goShoppingOrderList()">完成</a>
+  </div>
+  <div class="payment-success-content">
+      <div class="payment-success-top cl">
+        <div class="payment-success-div">
+          <img src="../../../../assets/imgs/shopping-order-payment-success-1.png" alt="图标">
+        </div>
+        <div class="payment-success-div">
+          <p>支付方式: <span>微信支付</span></p>
+          <p>订单金额: <span>￥{{order_amount}}</span></p>
+        </div>
+      </div>
+      <div class="check-order-btn" (click)="goShoppingOrderDetail()">
+        查看订单
+      </div>
+      <div class="payment-success-p">
+          <p>注意: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一大批平台及销售不会以订购单异常、系统升级为由要求您点击任何网址链接进行退款操作。</p>
+      </div>
+  </div>
+  <app-guess-you-like></app-guess-you-like>
+</div>

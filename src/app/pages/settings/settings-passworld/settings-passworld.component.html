@@ -1,0 +1,31 @@
+<div class="settings-passworld">
+  <!--<app-header [title]="title" (parentGoBack)="goBack()"></app-header>-->
+
+  <div class="passworld-content">
+    <ul>
+      <li>
+        <span>帐户名</span> <input type="text" [(ngModel)]="phone" disabled placeholder="请输入手机/用户名">
+      </li>
+      <li>
+        <span>验证码</span>
+        <input type="text" [(ngModel)]="code" placeholder="请输入验证码">
+        <span *ngIf="isSends" [ngStyle]="{'color':isSends?'#d5393c':'#666'}" (click)="getMsgCode()">获取验证码</span>
+        <span *ngIf="!isSends" [ngStyle]="{'color':isSends?'#d5393c':'#666'}">{{sends}}s</span>
+        <!--<span class="forget-2-2 btn" *ngIf="!isSends" href="javascript:void(0)">{{sends}}s</span>-->
+      </li>
+      <li *ngIf="isEye">
+        <span>设置新密码</span>
+        <input type="password" [(ngModel)]="password" placeholder="6-20位字母+数字或符号组合">
+        <img (click)="checkEye()" src="../../../../assets/imgs/close_password.png" alt="眼睛">
+      </li>
+      <li *ngIf="!isEye">
+        <span>设置新密码</span>
+        <input type="text" [(ngModel)]="password" placeholder="6-20位字母+数字或符号组合">
+        <img (click)="checkEye()" src="../../../../assets/imgs/open_password.png" alt="眼睛">
+      </li>
+    </ul>
+    <div class="password-btn" (click)="doSubmit()">
+      提交
+    </div>
+  </div>
+</div>

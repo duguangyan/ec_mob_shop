@@ -1,0 +1,57 @@
+<div class="content">
+  <div class="detail">
+    <div class="form">
+      <!--<p>货源类型:  <span> {{data.source_type_name}}</span></p>-->
+      <p>物料名称:  <span>{{data.u_cname || '暂无'}}</span></p>
+      <p>价格范围:  <span> {{data.price_range || '暂无'}}</span></p>
+      <!--<p>订单日期:  <span>{{data.created_at || '暂无'}}</span></p>-->
+    </div>
+    <div class="describe">
+      <h5>描述:</h5>
+      <p>{{data.field_desc || '暂无'}}</p>
+    </div>
+    <div class="way">
+      <h5>找料方式: <span>{{data.sampling_type_new || '暂无'}}</span> </h5>
+      <div class="wayContent1" *ngIf="data.sampling_type ===2">
+        <p>联系人: <span>{{data.sampling_linkman || '暂无'}}</span></p>
+        <p>联系电话: <span>{{data.sampling_number || '暂无'}}</span></p>
+        <p>取样地址: <span>{{data.sampling_address || '暂无'}}</span></p>
+      </div>
+      <div class="wayContent2" *ngIf="data.sampling_type ===1">
+        <ul>
+          <li>
+            <p>正面</p>
+            <div>
+              <img [src]="data.img1_url == ''?imgUrl:data.img1_url">
+            </div>
+          </li>
+          <li>
+            <p>侧面</p>
+            <div>
+              <img [src]="data.img2_url == ''?imgUrl:data.img2_url">
+            </div>
+          </li>
+          <li>
+            <p>背面</p>
+            <div>
+              <img [src]="data.img3_url == ''?imgUrl:data.img3_url">
+            </div>
+          </li>
+          <div style="clear: both"></div>
+        </ul>
+      </div>
+      <div class="wayContent3 cl" *ngIf="data.sampling_type ===3">
+        <p>联系人:<span>田先生</span></p>
+        <p>联系电话:<span>18320985894</span></p>
+        <p class="cl"> <span>取样地址: 广东省广州市花都区镜湖大道南33号财富工业园7号楼2层</span></p>
+      </div>
+    </div>
+    <div class="order">
+      <p><i></i><span><img src="../../../../assets/imgs/payment_icon_1.png">你的找料单号: </span> <span>{{data.id}}</span></p>
+      <p><i></i><span><img src="../../../../assets/imgs/payment_icon_22.png">本次找料服务费: </span> <span>{{data.pay_fee | number:'1.2-2'}}元</span> <span class="payBtn" (click)="goPayment()" *ngIf="!data.is_payed">去支付</span> <span *ngIf="data.is_payed">已支付</span></p>
+      <!--<p><i></i><span><img src="../../../../assets/imgs/payment_icon_3.png">发票类型: </span> <span>电子普通发票</span> <span class="check-invoice" (click)="checkInvoice()">查看发票</span></p>
+      <p><i></i><span><img src="../../../../assets/imgs/payment_icon_3.png" style="opacity: 0;">发票抬头: </span> <span>个人</span></p>-->
+    </div>
+  </div>
+</div>
+<app-footer [select]="4"></app-footer>

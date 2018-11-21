@@ -1,0 +1,148 @@
+.content{
+ position: relative;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.logo{
+  text-align: center;
+}
+.logo img{
+  width: 300px;
+}
+.username{
+  height: 100px;
+  line-height: 100px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+.from{
+  font-size: 30px;
+  padding: 50px 20px;
+  background-color: #fff;
+  height: 100%;
+}
+.password{
+  height: 100px;
+  line-height: 100px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.username >img ,.password >img{
+  width: 40px;
+  position: relative;
+  left: 40px;
+}
+.username input,.password input{
+  font-size: 30px;
+  background-color: #fff;
+  height: 80%;
+  border: none;
+  padding-left: 5px;
+  margin-left: 50px;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  outline:none;
+  color: #333;
+  width: 80%;
+}
+.password{
+  position: relative;
+}
+.seePassword{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+.seePassword img{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.submit, .noSubmit{
+  width: 710px;
+  height: 80px;
+  background-color: #d5393c;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 60px;
+  font-size: 18px;
+  -webkit-box-shadow: 0px 1px 2px 0px #999;
+  box-shadow: 0px 1px 2px 0px #999;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.noSubmit{
+  background-color: #cacaca;
+}
+.forgetPassword{
+  text-align: right;
+  float: right;
+  font-size: 24px;
+  margin-top: 60px;
+  text-decoration: underline;
+  font-size: 30px;
+}
+.register{
+  position: relative;
+  top: 60px;
+  text-decoration: underline;
+}
+.wxLogin{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+  position: absolute;
+  bottom: 50px;
+  width: 750px;
+  z-index: 999;
+}
+.wxLogin img{
+  width: 100px;
+  margin: 50px 0 10px 0;
+}
+.wxLogin p{
+  color: #666;
+  width: 210px;
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.wxLogin p:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #cacaca;
+  z-index: -1;
+}
+.wxLogin span{
+  display: block;
+}
+.login-nav{
+  height: 100px;
+  line-height: 100px;
+  padding-top: 30px;
+}
+.login-nav ul li{
+  float: left;
+  margin-right: 30px;
+  position: relative;
+  font-size: 36px;
+}
+.login-nav ul li:first-child:after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+}

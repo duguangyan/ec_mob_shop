@@ -1,0 +1,16 @@
+.explain{
+  padding: 0 10px;
+  margin-top: 60px;
+}
+.explain strong{
+
+}
+.explain p{
+  color: #333;
+  padding: 0;
+  margin: 6px 0;
+  font-size: .24rem;
+}
+.explain span{
+  color: #999;
+}

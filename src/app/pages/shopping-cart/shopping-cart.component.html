@@ -1,0 +1,32 @@
+<div class="shopping-cart">
+  <!--<app-header class="cart-header" (parentGoBack)="goBack()" (parentDoEdit)="doEdit()" [title]="title" [edit]="edit"></app-header>-->
+  <div class="noData" (click)="goProductSearchList()" *ngIf="!isNodata">
+    <img src="../../../assets/imgs/shopping-cart-1.png" alt="图标">
+    <p>购物车是空的</p>
+  </div>
+  <div class="shopping-cart-content" *ngIf="isNodata">
+    <div class="cart-list" *ngFor="let list of cartLists;let i=index;">
+      <h3><i class="icon-active" (click)="parentCheck($event,list.id,i)"></i><span>{{list.shop_name}}</span></h3>
+      <div class="cart-list-content cl" *ngFor="let l of list.skus;let ii=index;">
+        <div class="checkbox"><i class="icon-active" (click)="toggleCheck($event,ii)"></i><em class="listId" style="opacity: 0;">{{l.cart_id}}</em></div>
+        <div><img [src]="l.goods_img_url" alt="图片"></div>
+
+        <div>
+          <h3>{{l.sku_name}}</h3>
+          <p class="list-content-p1"><span>{{l.sale_props_str}}</span></p>
+          <p class="list-content-p2 cl"><input class="addPrice" type="text" value="{{l.shop_price}}"><span>￥{{l.shop_price}}/{{l.unit_name}}</span> <span class="addInput"><em (click)="subduction($event,l.cart_id)">-</em><input type="number" oninput='this.value=this.value.replace(/^[0]+[0-9]*$/gi,"")' (keyup)="cartKeyDown($event,l.cart_id)" (change)="cartChange($event,l.cart_id)" class="inputVal" value="{{l.number}}"><em (click)="addition($event,l.cart_id)">+</em></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="shopping-cart-footer cl">
+      <div class="cart-footer-left">
+        <i class="icon-active" (click)="allCheck($event)"></i><a href="javascript:void(0);">全选</a> <span *ngIf="isEdit">合计: <strong>￥{{shopCartTotalMoney|number:'1.2-2'}}</strong></span>
+      </div>
+      <div class="cart-footer-right" [ngClass]="{'totalMoney':shopCartTotalMoney != 0 }">
+        <a href="javascript:void(0);" *ngIf="isEdit"  (click)="goShoppingOrderMessage()">结算</a>
+        <a href="javascript:void(0);" *ngIf="!isEdit" (click)="delOrderList()">删除</a>
+      </div>
+    </div>
+  </div>
+</div>
+<app-dialog-popup *ngIf="isPopup" [msg]="popupMsg" (parentClose)="popupClose()" (parentDoOK)="popupDoOK()"></app-dialog-popup>

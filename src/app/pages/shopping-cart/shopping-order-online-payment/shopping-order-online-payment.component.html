@@ -1,0 +1,30 @@
+<div class="shopping-order-online-payment">
+  <!--<app-header [title]="title" (parentGoBack)="goBack()"></app-header>-->
+  <div class="online-payment-content">
+    <ul>
+      <li class="cl"><span style="font-size: 36px">应付金额</span><span>￥{{order_amount}}</span></li>
+      <li><span>订单编号: {{order_sn}}</span></li>
+      <li><span>选择支付方式</span></li>
+    </ul>
+    <ul>
+      <li (click)="checkPayNav(i)" class="online-payment-checked" *ngFor="let item of payNav;let i=index;"><span><img [src]="item.imgUrl" alt="图标">{{item.name}}</span><i [ngClass]="{'icon-active':checkPayIndex  == i,'icon-prototype':checkPayIndex  != i}"></i></li>
+    </ul>
+
+  </div>
+  <div class="online-payment-footer" id="WXPAY" (click)="goPayDoing()">支付: ￥{{order_amount}}</div>
+  <div class="online-payment-footer" id="ZFBPAY"></div>
+
+</div>
+<div class="dialog-popup" *ngIf="isPopup">
+  <div class="mask-layer"></div>
+  <div class="popup-content" @upIn @upOut>
+    <div class="popup-title">
+      优惠不等人,商品超过<span>24小时</span>未支付,订单将被取消
+    </div>
+    <div class="popup-btn">
+      <a href="javascript:void(0);" (click)="close()">取消</a>
+      <a href="javascript:void(0);" (click)="doOK()">确定</a>
+    </div>
+  </div>
+</div>
+

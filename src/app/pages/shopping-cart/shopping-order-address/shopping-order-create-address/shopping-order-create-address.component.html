@@ -1,0 +1,22 @@
+<div class="shopping-order-create-address">
+  <!--<app-header [title]="title" (parentGoBack)="goBack()" ></app-header>-->
+  <div class="create-address-content">
+    <ul>
+      <li><span>收货人</span><input type="text" [(ngModel)]="name" placeholder="请填写"></li>
+      <li><span>联系方式</span><input type="text" [(ngModel)]="phone" placeholder="请填写"></li>
+      <li><span>所在地区</span>
+
+        <img src="../../../../../assets/imgs/arrows_right.png" alt="箭头">
+        <div class="content-block">
+          <input id="cityCheck" type="text"  placeholder="城市选择" readonly="" onfocus="this.blur()"  [(ngModel)]="inputValue"  />
+          <input id="cityValue" type="hidden"  value=""/>
+        </div>
+      </li>
+      <li> <textarea [(ngModel)]="describe" placeholder="请填写详细地址"></textarea></li>
+      <li><span>默认地址选择</span> <a [ngClass]="{'address-init-btn':isAdressActive,'address-active-btn':!isAdressActive}" (click)="checkActive()"><i></i></a></li>
+    </ul>
+
+  </div>
+  <div class="create-address-footer" (click)="getAdressValue()">保存并使用</div>
+</div>
+

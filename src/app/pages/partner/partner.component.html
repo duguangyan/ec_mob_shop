@@ -1,0 +1,31 @@
+<div class="partner">
+  <img src="../../../assets/imgs/partner.png">
+  <div class="partner-content">
+    <ul>
+      <li>
+        类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+        <span (click)="doCheck()"><i [ngClass]="{'icon-active':isCheck,'icon-prototype':!isCheck}"></i> 城市合伙人</span>
+        <span (click)="doCheck()"><i [ngClass]="{'icon-active':!isCheck,'icon-prototype':isCheck}"></i> 品类合伙人</span>
+      </li>
+      <li>
+        <label>公司名称&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        <input type="text" [(ngModel)]="company" placeholder="请输入公司名称"/>
+      </li>
+      <li>
+        <label>联系人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        <input type="text" [(ngModel)]="name" placeholder="请输入联系人"/>
+      </li>
+      <li>
+        <label>您所在城市:</label>
+        <input type="text" [(ngModel)]="city" placeholder="请输入您所在城市"/>
+      </li>
+      <li class="cl">
+        <label>详细描述&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        <textarea type="text" maxlength="300" [(ngModel)]="describe" placeholder="请输入您公司的详细信息"></textarea>
+      </li>
+    </ul>
+    <span (click)="submit()">
+      立即报名
+    </span>
+  </div>
+</div>

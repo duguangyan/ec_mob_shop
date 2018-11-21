@@ -1,0 +1,18 @@
+<div class="dialog-multiple">
+  <div class="mask-layer" (click)="multiple('取消')"></div>
+  <div>
+    <div class="multiple-content">
+      <ul>
+        <li *ngFor="let m of multipleList" (click)="multiple(m)">{{m}}</li>
+      </ul>
+
+    </div>
+    <div class="multiple-close">
+      <ul>
+        <li (click)="multiple('取消')">取消</li>
+      </ul>
+    </div>
+  </div>
+
+
+</div>

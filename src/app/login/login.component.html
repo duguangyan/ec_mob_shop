@@ -1,0 +1,54 @@
+<!--<app-header [title]="title" (parentGoBack)="goBack()"></app-header>-->
+<div class="content">
+ <!-- <div class="logo">
+    <img src="../../assets/imgs/logo_small.png" alt="首页图片">
+  </div>-->
+  <div class="from cl">
+
+   <!-- <div><div>img</div> <input type="text" [(ngModel)]="phoneNuber" placeholder="手机号"></div>
+    <div></div>
+    <div><i></i>
+
+      <input *ngIf="isPwShow" type="password" [(ngModel)]="passWord" placeholder="密码">
+      <input *ngIf="!isPwShow" type="text" [(ngModel)]="passWord" placeholder="密码">
+      <i *ngIf="isPwShow" (click)="passWordShow()"></i>
+      <i style="background-position: -136px -30px;" *ngIf="!isPwShow" (click)="passWordShow()"></i>
+    </div>-->
+
+    <div class="login-nav">
+      <ul>
+        <li>登录账号</li>
+        <li (click)="goRegister()">注册账号</li>
+      </ul>
+    </div>
+    <div class="username">
+      <!--<img src="../../assets/imgs/login_username.png" alt="手机号码">-->
+      <span>账户:</span><input type="text"  (keyup)="judgeLogin()" (blur)="judgeLogin()"  [(ngModel)]="phone" placeholder="手机号">
+
+    </div>
+    <div class="password">
+      <!--<img src="../../assets/imgs/login_password.png" alt="登录密码">-->
+      <span>密码:</span>
+      <input *ngIf="isPwShow" type="password" (keyup)="judgeLogin()" (blur)="judgeLogin()"  [(ngModel)]="passWord" placeholder="密码">
+      <input *ngIf="!isPwShow" type="text" (keyup)="judgeLogin()" (blur)="judgeLogin()" [(ngModel)]="passWord" placeholder="密码">
+      <div class="seePassword" (click)="showPassWord()">
+        <img *ngIf="isPwShow"  src="../../assets/imgs/close_password.png">
+        <img *ngIf="!isPwShow" src="../../assets/imgs/open_password.png">
+      </div>
+    </div>
+
+
+    <input *ngIf="!isJudge" class="noSubmit" type="submit" value="登陆" />
+    <input *ngIf="isJudge" class="submit" (click)="login()" type="submit" value="登陆" />
+    <!--<a class="register" href="javascript:void(0)" (click)="goRegister()">手机快速注册</a>-->
+    <a class="forgetPassword" href="javascript:void(0)" (click)="goForgetPassWord()">忘记密码</a>
+  </div>
+  <div class="wxLogin" *ngIf="isWeiXin()">
+    <p>其他登录方式</p>
+    <img src="../../assets/imgs/login_weixin.png" (click)="goWXLogin()">
+    <span>微信</span>
+  </div>
+</div>
+<!--
+<app-footer [select]="3"></app-footer>
+-->

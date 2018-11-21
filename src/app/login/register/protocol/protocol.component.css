@@ -1,0 +1,15 @@
+.protocol{
+  padding: 0 20px;
+}
+.protocol h5{
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+}
+.protocol p{
+  font-size: 24px;
+}
+.protocol strong{
+  margin: 20px 0;
+  display: block;
+}

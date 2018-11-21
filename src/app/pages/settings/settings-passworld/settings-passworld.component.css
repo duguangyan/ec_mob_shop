@@ -1,0 +1,43 @@
+.settings-passworld{
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.passworld-content ul li{
+  height: 90px;
+  line-height: 90px;
+  font-size: 30px;
+  color: #333;
+  background-color: #fff;
+  margin-top: 30px;
+  padding-left: 30px;
+}
+.passworld-content ul li input{
+  padding-left: 20px;
+  width: 400px;
+  background-color: #fff;
+  border: none;
+}
+.passworld-content ul li:nth-child(2) span:last-child{
+  font-size: 24px;
+  text-decoration: underline;
+  display: inline-block;
+  border-left: 1px solid #e2e2e2;
+  padding-left: 30px;
+}
+.passworld-content ul li img{
+  position: relative;
+  left: 40px;
+}
+.password-btn{
+  width: 690px;
+  margin-left: 30px;
+  text-align: center;
+  height: 90px;
+  line-height: 90px;
+  font-size: 36px;
+  color: #fff;
+  text-decoration: underline;
+  background-color: #d5393c;
+  border-radius: 10px;
+  margin-top: 60px;
+}

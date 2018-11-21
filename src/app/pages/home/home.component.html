@@ -1,0 +1,271 @@
+
+<div class="home">
+  <div class="index-search cf">
+    <div class="index-search-filtrate" (click)="doShowCheck($event)">
+      <img src="../../../assets/imgs/index_search_filtrate.png" alt="filtrate">
+      <p>分类</p>
+    </div>
+    <div class="index-search-input" (click)="productSearch()">
+      <div>
+        <img src="../../../assets/imgs/index_search_btn.png" alt="btn">
+        <input type="search" placeholder="请输入要搜索的商品" readonly />
+      </div>
+    </div>
+  </div>
+  <div class="home-filtrate-floating" *ngIf="searchFiltrate">
+    <div class="floating-bg" (click)="doShowCheck($event)"></div>
+    <div class="floating-content cl" >
+      <ul>
+        <li *ngFor="let v of filtrateDates" (click)="getFiltrateDataSecondLevel(v.id,$event)">{{v.name}} <i></i></li>
+      </ul>
+      <ul>
+        <li *ngFor="let v of filtrateDataSecondLevel" (click)="getFiltrateDataThreeLevel(v.id,$event)">{{v.name}} <i></i></li>
+      </ul>
+      <ul>
+        <li *ngFor="let v of filtrateDataThreeLevel" (click)="goFiltrateDetail(v.id)">{{v.name}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content" [ngClass]="{'filter-blur':isShowCheck}">
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../../../assets/imgs/slide_1.png" alt="slide"></div>
+        <div class="swiper-slide"><img src="../../../assets/imgs/slide_2.png" alt="slide"></div>
+        <div class="swiper-slide"><img src="../../../assets/imgs/slide_3.png" alt="slide"></div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="index-dynamic">
+      <img src="../../../assets/imgs/dynamic_icon.png" alt="dynamic"> <i></i>
+      <div>
+        <p class="index-dynamic-p">热烈祝贺广州掌上包包设计有限公司成为小鹿快找签约客户！	热烈祝贺广州长保皮具厂成为小鹿快找签约客户！ 热烈祝贺温州中博进出口有限公司成为小鹿快找签约客户！ 热烈祝贺广州双璐皮具厂成为小鹿快找签约客户！ 	热烈祝贺广州艺丰皮具厂成为小鹿快找签约客户！ 	热烈祝贺广州圣迦希皮具厂成为小鹿快找签约客户！ 	热烈祝贺广州素杰设计有限公司成为小鹿快找签约客户！ 	热烈祝贺广州文景皮具厂成为小鹿快找签约客户！ </p>
+      </div>
+    </div>
+    <div class="index-navigation cl">
+      <a href="javascript:void(0)" (click)="goSearch()">
+        <img src="../../../assets/imgs/3@2x.png" alt="navigation">
+        <p>找料</p>
+      </a>
+      <a href="javascript:void(0)" (click)="goProductSearchList()">
+        <img src="../../../assets/imgs/4@2x.png" alt="navigation">
+        <p>商城</p>
+      </a>
+     <!-- <a href="javascript:void(0)">
+        <img src="../../../assets/imgs/5@2x.png" alt="navigation">
+        <p>求购</p>
+      </a>-->
+      <!--<a href="javascript:void(0)" (click)="goRecharge()">
+        <img src="../../../assets/imgs/h1@2x.png" alt="navigation">
+        <p>优惠套餐</p>
+      </a>
+      <a href="javascript:void(0)">
+        <img src="../../../assets/imgs/9@2x.png" alt="navigation">
+        <p>产业头条</p>
+      </a>-->
+      <a href="javascript:void(0)" (click)="partner()">
+        <img src="../../../assets/imgs/7@2x.png" alt="navigation">
+        <p>鹿伙人</p>
+      </a>
+      <a href="javascript:void(0)" (click)="transport()">
+        <img src="../../../assets/imgs/h2@2x.png" alt="navigation">
+        <p>鹿通物流</p>
+      </a>
+
+      <!--<a href="javascript:void(0)">
+        <img src="../../../assets/imgs/h3@2x.png" alt="navigation">
+        <p>定制采集</p>
+      </a>-->
+    </div>
+    <!--<div class="index-identifying cl">
+      <a href="javascript:void(0)">
+        <img src="../../../assets/imgs/11@2x.png" alt="identifying">
+      </a>
+      <a href="javascript:void(0)">
+        <img src="../../../assets/imgs/12@2x.png" alt="identifying">
+      </a>
+      <a href="javascript:void(0)">
+        <img src="../../../assets/imgs/13@2x.png" alt="identifying">
+      </a>
+      <a href="javascript:void(0)">
+        <img src="../../../assets/imgs/14@2x.png" alt="identifying">
+      </a>
+    </div>-->
+    <div style="height: 20px;background-color: #f2f2f2"></div>
+    <div class="index-product">
+      <div class="product-title" (click)="goMoreProductDetails(1)">
+          <i></i><span>面料</span> <span>更多 <img src="../../../assets/imgs/arrows_right.png" alt="arrows"></span>
+      </div>
+      <div class="product-content">
+        <div class="product-content-top cl">
+          <div class="product-content-details cl">
+            <div class="product-content-heigth">
+              <!--<h3>优质皮革专场</h3>
+              <p>加厚仿真人造革diy硬包床头皮子pu皮料</p>
+              <p class="product-content-price"><span>6.90</span>元</p>-->
+              <img (click)="goProductDetails(25)" src="../../../assets/imgs/id=25@2x.png" alt="皮料">
+            </div>
+          </div>
+          <div class="product-content-details">
+            <div>
+             <!-- <h3>纳帕纹pu皮料人造革</h3>
+              <p>硬包床头皮子pu皮料</p>
+              <p class="product-content-price"><span>6.90</span>元/码</p>-->
+              <img (click)="goProductDetails(24)" src="../../../assets/imgs/id=24@2x.png" alt="皮料">
+            </div>
+            <div>
+              <!--<h3>纳帕纹pu皮料人造革</h3>
+              <p>硬包床头皮子pu皮料</p>
+              <p class="product-content-price"><span>6.90</span>元/码</p>-->
+              <img (click)="goProductDetails(27)" src="../../../assets/imgs/id=27@2x.png" alt="皮料">
+            </div>
+          </div>
+        </div>
+        <div class="product-content-bottom cl">
+            <div class="cl">
+              <!--<h3>纳帕纹pu皮料人造革</h3>
+              <p>硬包床头皮子pu皮料</p>
+              <p class="product-content-price"><span>6.90</span>元/码</p>-->
+              <img (click)="goProductDetails(30)" src="../../../assets/imgs/id=30@2x.png" alt="皮料">
+            </div>
+            <div class="cl">
+              <!--<h3>纳帕纹pu皮料人造革</h3>
+              <p>硬包床头皮子pu皮料</p>
+              <p class="product-content-price"><span>6.90</span>元/码</p>-->
+              <img (click)="goProductDetails(32)" src="../../../assets/imgs/id=32@2x.png" alt="皮料">
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="index-product">
+      <div class="product-title" (click)="goMoreProductDetails(2)">
+        <i></i><span>辅料</span> <span>更多 <img src="../../../assets/imgs/arrows_right.png" alt="arrows"></span>
+      </div>
+      <div class="product-content">
+        <div class="product-content-top cl">
+          <div class="product-content-details cl">
+            <div class="product-content-heigth">
+              <!--<h3>优质皮革专场</h3>
+              <p>加厚仿真人造革diy硬包床头皮子pu皮料</p>
+              <p class="product-content-price"><span>6.90</span>元</p>-->
+              <img (click)="goProductDetails(36)" src="../../../assets/imgs/id=36@2x.png" alt="皮料">
+            </div>
+          </div>
+          <div class="product-content-details">
+            <div>
+              <!--<h3>纳帕纹pu皮料人造革</h3>
+              <p>硬包床头皮子pu皮料</p>
+              <p class="product-content-price"><span>6.90</span>元/码</p>-->
+              <img (click)="goProductDetails(37)" src="../../../assets/imgs/id=37@2x.png" alt="皮料">
+            </div>
+            <div>
+             <!-- <h3>纳帕纹pu皮料人造革</h3>
+              <p>硬包床头皮子pu皮料</p>
+              <p class="product-content-price"><span>6.90</span>元/码</p>-->
+              <img (click)="goProductDetails(39)" src="../../../assets/imgs/id=39@2x.png" alt="皮料">
+            </div>
+          </div>
+        </div>
+        <div class="product-content-bottom cl">
+          <div class="cl">
+            <!--<h3>纳帕纹pu皮料人造革</h3>
+            <p>硬包床头皮子pu皮料</p>
+            <p class="product-content-price"><span>6.90</span>元/码</p>-->
+            <img (click)="goProductDetails(40)" src="../../../assets/imgs/id=40@2x.png" alt="皮料">
+          </div>
+          <div class="cl">
+            <!--<h3>纳帕纹pu皮料人造革</h3>
+            <p>硬包床头皮子pu皮料</p>
+            <p class="product-content-price"><span>6.90</span>元/码</p>-->
+            <img (click)="goProductDetails(43)" src="../../../assets/imgs/id=43@2x.png" alt="皮料">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="index-product">
+      <div class="product-title" (click)="goMoreProductDetails(3)">
+        <i></i><span>五金</span> <span>更多 <img src="../../../assets/imgs/arrows_right.png" alt="arrows"></span>
+      </div>
+      <div class="product-content">
+        <div class="product-content-top cl">
+          <div class="product-content-details cl">
+            <div class="product-content-heigth">
+              <!--<h3>优质皮革专场</h3>
+              <p>加厚仿真人造革diy硬包床头皮子pu皮料</p>
+              <p class="product-content-price"><span>6.90</span>元</p>-->
+              <img (click)="goProductDetails(31)" src="../../../assets/imgs/id=31@2x.png" alt="皮料">
+            </div>
+          </div>
+          <div class="product-content-details">
+            <div>
+              <!--<h3>纳帕纹pu皮料人造革</h3>
+              <p>硬包床头皮子pu皮料</p>
+              <p class="product-content-price"><span>6.90</span>元/码</p>-->
+              <img (click)="goProductDetails(3)" src="../../../assets/imgs/id=3@2x.png" alt="皮料">
+            </div>
+            <div>
+              <!-- <h3>纳帕纹pu皮料人造革</h3>
+               <p>硬包床头皮子pu皮料</p>
+               <p class="product-content-price"><span>6.90</span>元/码</p>-->
+              <img (click)="goProductDetails(29)" src="../../../assets/imgs/id=29@2x.png" alt="皮料">
+            </div>
+          </div>
+        </div>
+        <div class="product-content-bottom cl">
+          <div class="cl">
+            <!--<h3>纳帕纹pu皮料人造革</h3>
+            <p>硬包床头皮子pu皮料</p>
+            <p class="product-content-price"><span>6.90</span>元/码</p>-->
+            <img (click)="goProductDetails(33)" src="../../../assets/imgs/id=33@2x.png" alt="皮料">
+          </div>
+          <div class="cl">
+            <!--<h3>纳帕纹pu皮料人造革</h3>
+            <p>硬包床头皮子pu皮料</p>
+            <p class="product-content-price"><span>6.90</span>元/码</p>-->
+            <img (click)="goProductDetails(35)" src="../../../assets/imgs/id=35@2x.png" alt="皮料">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="index-product">
+      <div class="product-title">
+        <i></i><span>合作品牌</span> <!--<span>更多 <img src="../../../assets/imgs/arrows_right.png" alt="arrows"></span>-->
+      </div>
+      <div class="product-trademark cl">
+        <a href="javascript:void(0)" *ngFor="let l of list">
+          <img [src]="l.brand_logo_url" onerror="this.style.display='none'">
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<app-footer [select]="1"></app-footer>
+
+
+<!--
+<weui-infiniteloader (loadmore)="onLoadMore($event)" #comp>
+  <Page [ngClass]="'infiniteloader'" [title]="'Infinite Loader'" [subTitle]="'滚动加载'" [spacing]="false" [noBottom]="true">
+
+    <div class="weui-cells__title">List with 50 Max</div>
+    <div class="weui-cells">
+      <a *ngFor="let i of items" class="weui-cell weui-cell_access" href="javascript:;">
+        <div class="weui-cell__bd">{{i}}</div>
+        <div class="weui-cell__ft"></div>
+      </a>
+    </div>
+
+    &lt;!&ndash;<weui-button *ngIf="restartBtn" (click)="restart()">重新开始</weui-button>&ndash;&gt;
+  </Page>
+</weui-infiniteloader>
+-->
+

@@ -1,0 +1,58 @@
+.settings-phone{
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.phone-content{
+  height: 70px;
+  line-height: 70px;
+  font-size: 24px;
+  color: #999;
+  border-bottom: 1px solid #c8c7cc;
+}
+.phone-number{
+  margin-left: 30px;
+}
+.phone-message{
+  height: 180px;
+  background-color: #fff;
+}
+.phone-message{
+  font-size: 30px;
+  color: #000;
+}
+.phone-message ul li{
+  height: 90px;
+  line-height: 90px;
+  margin-left: 30px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.phone-message ul li:last-child{
+  border-bottom: none;
+}
+.phone-message ul li input{
+  height: 89px;
+  line-height: 89px;
+  width: 415px;
+  padding-left: 20px;
+}
+.phone-message ul li span{
+  text-decoration: underline;
+  text-decoration: underline;
+  display: inline-block;
+  border-left: 1px solid #e2e2e2;
+  padding-left: 28px;
+  font-size: 24px;
+}
+.phone-btn{
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  background-color: #d5393c;
+  width: 690px;
+  margin-left: 30px;
+  margin-top: 60px;
+  text-decoration: underline;
+  border-radius: 10px;
+}

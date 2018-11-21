@@ -1,0 +1,27 @@
+<div class="settings-message">
+  <!--<app-header [title]="title" (parentGoBack)="goBack()"></app-header>-->
+
+  <div class="settings-message-content">
+    <ul>
+      <li>
+        <span>头像</span>
+        <img class="heaader-img"  [src]="imageUrl" alt="图标">
+        <input class="change-img" (change)="onChangeFile($event)" type="file" enctype="multipart/form-data"  />
+        <img src="../../../../assets/imgs/arrows_right.png" alt="箭头">
+      </li>
+      <li (click)="goSettingsNickname()">
+        <span>昵称</span>
+        <span>{{nick_name}}</span>
+        <img src="../../../../assets/imgs/arrows_right.png" alt="箭头">
+      </li>
+      <!--<li (click)="checkSex()">
+        <span>性别</span>
+        <span>男</span>
+        <img src="../../../../assets/imgs/arrows_right.png" alt="箭头">
+      </li>-->
+    </ul>
+  </div>
+
+</div>
+<!--取消订单弹窗-->
+<app-dialog-multiple *ngIf="isDelOrder" [multipleList]="multipleList" (parentMultiple)="multiple($event)"></app-dialog-multiple>

@@ -1,0 +1,82 @@
+<div class="supernatant">
+  <div class="supernatant-list" *ngFor="let list of newLists">
+    <div class="supernatant-title cl">
+      <h3>{{list.text}}</h3> <img *ngIf="list.sub.length>8" src="../../../../../../assets/imgs/product_search_icon.png">
+    </div>
+    <div class="supernatant-content">
+      <a class="supernatant-content-a" *ngFor="let con of list.sub" href="javascript:void(0)">{{con.text}} <span style="display:none">{{con.value}}</span></a>
+    </div>
+  </div>
+  <!--<div>
+    <div class="supernatant-title cl">
+      <h3>用途</h3> <img src="../../../../../../assets/imgs/product_search_icon.png" (click)="toggle()">
+    </div>
+    <div class="supernatant-content">
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+    </div>
+  </div>
+  <div>
+    <div class="supernatant-title cl">
+      <h3>用途</h3> <img src="../../../../../../assets/imgs/product_search_icon.png">
+    </div>
+    <div class="supernatant-content">
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+    </div>
+  </div>
+  <div>
+    <div class="supernatant-title cl">
+      <h3>用途</h3> <img src="../../../../../../assets/imgs/product_search_icon.png">
+    </div>
+    <div class="supernatant-content">
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+    </div>
+  </div>
+  <div>
+    <div class="supernatant-title cl">
+      <h3>用途</h3> <img src="../../../../../../assets/imgs/product_search_icon.png">
+    </div>
+    <div class="supernatant-content">
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+      <a href="javascript:void(0)">xxx</a>
+    </div>
+  </div>-->
+  <div class="no-data" *ngIf="!isData">
+    <img src="../../../../../../assets/imgs/shopping-order-list-1.png">
+    <p>暂无数据</p>
+  </div>
+
+</div>
+<div class="footer-btn" *ngIf="isData">
+  <div><a href="javascript:void(0);" (click)="doReset()">重置</a></div>
+  <div><a  href="javascript:void(0)" (click)="doFind()">确认</a></div>
+</div>
+<div class="footer-btn-1" *ngIf="!isData" (click)="goBack()">
+  <a  href="javascript:void(0)">返回上一页</a>
+</div>

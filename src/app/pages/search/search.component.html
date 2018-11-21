@@ -1,0 +1,95 @@
+<!--<div class="header">
+  <h5>小鹿找料</h5>
+</div>-->
+<div class="content">
+  <div class="search">
+    <p class="title">请填写物料信息</p>
+    <div class="select1">
+      <span><strong class="red" style="opacity: 0">*</strong>物料名称:</span>
+      <input type="text" [(ngModel)]="materialName"  placeholder="请输入"  onfocus="this.placeholder=''" onblur="this.placeholder='请输入'">
+      <!--<select [(ngModel)]="seVal1" (ngModelChange)="select1Change()">
+        <option *ngFor="let v of selectVals1">{{v}}</option>
+      </select>-->
+    </div>
+    <!-- <div class="select2">
+       <span><strong class="red" style="opacity: 0">*</strong>物料类型:</span>
+       <select [(ngModel)]="seVal2" (ngModelChange)="select2Change(seVal2)">
+         <option *ngFor="let v of selectVals2">{{v.name}}</option>
+       </select>
+       <select [(ngModel)]="seVal3" (ngModelChange)="select3Change()">
+         <option *ngFor="let v of selectVals3">{{v.name}}</option>
+       </select>
+     </div>-->
+    <div class="price">
+      <span><strong class="red" style="opacity: 0">*</strong>价格范围:</span>
+      <input type="text" [(ngModel)]="price" placeholder="请输入">
+      <!--<input type="number" [(ngModel)]="minPrice" placeholder="请输入">
+      <i>-</i>
+      <input type="number" [(ngModel)]="maxPrice" placeholder="请输入">元-->
+    </div>
+    <div class="describe">
+      <span><strong class="red">*</strong>描述:</span>
+      <textarea name="" maxlength="300" [(ngModel)]="fieldDesc"  placeholder="(注：请详细描述物料的名称、用途、材质、交货时间)" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="choose">
+      <h5>请选择一种找料方式:</h5>
+      <div class="choose-btn">
+        <a href="javascript:void(0)" (click)="activeBtn(i)" [ngClass]="{'active': i==isBtnShow}" *ngFor="let o of chooseBtnVal;let i=index">{{o}}</a>
+      </div>
+    </div>
+    <div class="footerNavs">
+      <div class="nav1" *ngIf="isBtnShow===0">
+        <a>
+          <div>
+            <input class="change" (change)="onChangeSelectFile($event,1)" type="file" enctype="multipart/form-data"  />
+            <img class="search--url"  [src]="imageUrl1">
+            <span *ngIf="loading1">图片上传中... </span>
+            <p>正面</p>
+            <p>添加图片</p>
+          </div>
+          <img (click)="delImg(1)" class="search-del-btn" src="../../../assets/imgs/search-del-btn.png">
+        </a>
+        <a>
+          <div>
+            <input class="change" (change)="onChangeSelectFile($event,2)" type="file" enctype="multipart/form-data"/>
+            <img class="search--url" [src]="imageUrl2">
+            <span *ngIf="loading2">图片上传中... </span>
+            <p>侧面</p>
+            <p>添加图片</p>
+          </div>
+
+          <img (click)="delImg(2)" class="search-del-btn" src="../../../assets/imgs/search-del-btn.png">
+        </a>
+        <a>
+          <div>
+            <input class="change" (change)="onChangeSelectFile($event,3)" type="file" enctype="multipart/form-data"/>
+            <img class="search--url"  class="searchImg3" [src]="imageUrl3">
+            <span *ngIf="loading3">图片上传中... </span>
+            <p>背面</p>
+            <p>添加图片</p>
+          </div>
+
+          <img (click)="delImg(3)" class="search-del-btn" src="../../../assets/imgs/search-del-btn.png">
+        </a>
+
+      </div>
+      <div class="nav2" *ngIf="isBtnShow===1">
+        <p><span style="margin-left: .28rem">  <strong class="red">*</strong>联系人:</span><input type="text" [(ngModel)]="samplingLinkman"  placeholder="请输入"  onfocus="this.placeholder=''" onblur="this.placeholder='请输入'"></p>
+        <p><span><strong class="red">*</strong>联系电话:</span><input type="text" [(ngModel)]="samplingNumber"  placeholder="请输入"  onfocus="this.placeholder=''" onblur="this.placeholder='请输入'"></p>
+        <p><span><strong class="red">*</strong>取样地址:</span><input type="text" [(ngModel)]="samplingAddress"  placeholder="(暂限广州白云区(三元里),广州狮岭地区皮革市场)"  onfocus="this.placeholder=''" onblur="this.placeholder='(广州白云区(三元里),广州狮岭地区)'"></p>
+      </div>
+      <div class="nav3" *ngIf="isBtnShow===2">
+        <p>联系人:<span>田先生</span></p>
+        <p>联系电话:<span>18320985894</span></p>
+        <p>寄样地址:<span>广东省广州市花都区镜湖大道南33号财富工业园7号楼2层</span></p>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+    <div class="submit" (click)="goPayment(isBtnShow+1)">
+      <p class="btn">确认提交</p>
+    </div>
+  </div>
+</div>
+<app-footer [select]="2"></app-footer>
+<app-popup *ngIf="isLogin" (toLogin)="toLogin($event)" ></app-popup>

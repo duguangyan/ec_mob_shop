@@ -1,0 +1,41 @@
+.settings-center{
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.center-content{
+  border-top:20px solid #f2f2f2;
+  border-bottom:1px solid #e2e2e2;
+  background-color: #fff;
+}
+.center-content ul li{
+  height: 90px;
+  line-height: 90px;
+  font-size: 30px;
+  color: #333;
+  position: relative;
+  margin-left: 30px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.center-content ul li:last-child{
+  border-bottom: none;
+}
+.center-content ul li img:first-child{
+  margin-right: 20px;
+}
+.center-content ul li img:last-child{
+  position: absolute;
+  right: 30px;
+  top: 28px;
+  width: 14px;
+}
+.center-btn{
+  width: 750px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  font-size: 30px;
+  color: #d5393c;
+  background-color: #fff;
+  border-top:20px solid #f2f2f2;
+  border-bottom:1px solid #e2e2e2;
+}

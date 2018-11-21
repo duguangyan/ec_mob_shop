@@ -1,0 +1,32 @@
+<div class="shopping-order-address">
+  <!--<app-header [title]="title" [edit]="edit" (parentGoBack)="goBack()" (parentDoEdit)="doEdit()"></app-header>-->
+  <div class="order-address-content">
+    <div  *ngIf="!isAddressList" class="order-address-bg">
+      <img src="../../../../assets/imgs/shopping_order_address_1.png" alt="图片">
+    </div>
+    <ul *ngIf="isAddressList">
+      <li class="cl" *ngFor="let list of addressList" (click)="doLiCheck($event,list.id,list.is_default)">
+        <div class="address-content-li">
+          <div class="address-content-div-1" *ngIf="!isEdit">
+            <i class="address-icon icon-prototype"></i> <i class="address-id" style="opacity: 0">{{list.id}}</i>
+          </div>
+          <div class="address-content-div-2" [ngStyle]="{'width': isEdit ? '100%' : '630px' }">
+            <img *ngIf="list.is_default == 1" src="../../../../assets/imgs/order_address_icon_1.png" alt="图标">
+            <p><span>{{list.consignee}} </span> <span> {{list.mobile}}</span></p>
+            <p><span class="activeColor" *ngIf="list.is_default == 1">[默认地址]</span>{{list.address}}</p>
+          </div>
+        </div>
+        <div class="address-content-div-3">
+          <i class="icon-edit" (click)="goShoppingOrderEditAddress(list.id)"></i>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div *ngIf="isEdit" class="order-address-footer" (click)="goShoppingOrderCreateAddress($event)">+ 新建收货地址</div>
+  <div [ngStyle]="{'opacity':!isAddressList ? '0' : '1' }" *ngIf="!isEdit" class="order-address-footer cl">
+    <div (click)="doAllCheck()"><i [ngClass]="{'icon-prototype':isAllCheck,'icon-active':!isAllCheck}"></i> 全选 </div>
+    <div (click)="delAddressAll()">删除</div>
+  </div>
+</div>

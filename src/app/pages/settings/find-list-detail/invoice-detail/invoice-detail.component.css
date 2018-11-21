@@ -1,0 +1,10 @@
+.invoice-detail{
+  background-color: #808080;
+  height: 100%;
+}
+.invoice-detail div{
+  padding: 20px;
+}
+.invoice-detail img{
+  width: 100%;
+}

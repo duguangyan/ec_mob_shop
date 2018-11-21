@@ -1,0 +1,162 @@
+.header{
+  width: 750px;
+  height: 90px;
+  line-height: 90px;
+  background-color: #fe0036;
+  color: #fff;
+  font-size: 36px;
+}
+.header h5{
+  height: 90px;
+  line-height: 90px;
+  font-size: 36px;
+}
+.content{
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.setting{
+  background-color: #fff;
+  position: relative;
+}
+.setting img:first-child{
+  width: 130px;
+  margin: 50px;
+  border-radius: 50%;
+}
+.setting img:nth-child(3){
+  position: relative;
+  left: 20px;
+  top: -10px;
+
+}
+.setting img:last-child{
+  width: 40px;
+  position: absolute;
+  top: 85px;
+  right: 50px;
+}
+.setting span{
+  position: relative;
+  font-size: 36px;
+}
+.settings-more{
+  height: 100px;
+  line-height: 100px;
+  padding: 0 20px;
+  border-top: 20px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #fff;
+}
+.settings-more img{
+  width: 10px;
+  position: relative;
+  top: -2px;
+}
+
+.settings-more span{
+  font-size: 30px;
+  margin-left: 30px;
+}
+.settings-more strong{
+  float: right;
+  font-size: 24px;
+  color: #999;
+  position: relative;
+  top: 0;
+  font-weight: 100;
+}
+.lists{
+  margin: 0 20px;
+}
+.lists ul li{
+  height: 60px;
+  line-height: 60px;
+}
+.lists ul li span{
+  display: inline-block;
+  float: left;
+  font-size: 24px;
+  padding-right: 20px;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  overflow : hidden;
+}
+.lists ul li span:nth-child(1){
+  width: 55%;
+  padding-right: 20px;
+
+}
+.lists ul li span:nth-child(2){
+  width: 22%;
+  padding-right: 1%;
+}
+.lists ul li span:nth-child(3){
+  width: 14%;
+  position: relative;
+  right: -30px;
+}
+.settings_address .settings-more img:last-child{
+  width: 20px;
+  float: right;
+  position: relative;
+  top: 25px;
+}
+.settings_address .settings-more img:first-child{
+
+}
+.address{
+  padding: 20px;
+  font-size: 24px;
+  height: 100px;
+  float: left;
+}
+.settings_service{
+  margin-top: 20px;
+  background-color: #fff;
+}
+.settings_service ul li{
+  width: 25%;
+  height: 120px;
+  float: left;
+  text-align: center;
+}
+.settings_service ul li{
+  margin: 35px 0;
+}
+.settings_service ul li img{
+  margin-top: 20px;
+}
+.settings_service ul li p{
+  font-size: 24px;
+  color: #999;
+  margin-top: 20px;
+}
+.noDates{
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+  color: #666;
+}
+.logout{
+  margin-top: 100px;
+  width: 710px;
+  margin-left: 20px;
+  height: 70px;
+  line-height: 70px;
+}
+.settings-status{
+  background-color: #fff;
+}
+.settings-status ul li{
+  width: 25%;
+  float: left;
+  font-size: 24px;
+  color: #666;
+  text-align: center;
+  padding: 40px 0;
+}
+.settings-status ul li p{
+  margin-top: 10px;
+}

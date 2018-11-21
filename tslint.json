@@ -1,0 +1,42 @@
+{"extends": "tslint:recommended",
+  "rules": {
+    "comment-format": [
+      false,
+      "check-space"
+    ],
+    "quotemark": [false, "single"],
+    "no-unused-variable": true,
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "no-trailing-whitespace": false,
+    "no-empty-interface":false,
+    "whitespace": [
+      false,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type"
+    ],
+    "one-line": [
+      false,
+      "check-open-brace",
+      "check-catch",
+      "check-else",
+      "check-whitespace"
+    ],
+    "no-var-keyword":false,
+    "typedef-whitespace": false,
+    "trailing-comma": false,
+    "ordered-imports": false,
+    "member-access": false,
+    "arrow-parens": false,
+    "semicolon": false,
+    "no-empty": false,
+    "indent": false,
+    "max-classes-per-file": [false]
+  },
+  "rulesDirectory": [
+    "node_modules/codelyzer"
+  ]
+}

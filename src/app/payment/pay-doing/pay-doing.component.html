@@ -1,0 +1,35 @@
+<!--<div class="header">
+  <span (click)="goback()"><img src="../../../../assets/imgs/arrows_left.png"></span> <h5>小鹿找料</h5>
+</div>-->
+<div class="content">
+  <div class="payment-logo">
+    <img src="../../../assets/imgs/payment-logo.png" (click)="goRecharge()">
+  </div>
+  <div class="payment-content">
+
+    <div><img style="width: .25rem" src="../../assets/imgs/payment_icon_2.png" ><span>支付金额</span></div>
+    <p>￥{{ queryParams.pay_fee |  number:'1.2-2'}}</p>
+    <div><img src="../../assets/imgs/payment_icon_1.png" ><span>您的找料单号: {{queryParams.id}}</span></div>
+  </div>
+
+  <div class="paydo">
+    <div (click)="doIconShow(1)">
+      <span><img *ngIf="payIndex ==1" src="../../../assets/imgs/paydo_icon_1.png"><img *ngIf="payIndex ==2" src="../../../assets/imgs/paydo_icon_4.png"> <img src="../../../assets/imgs/paydo_icon_3.png"></span>
+      <span>微信支付</span>
+    </div>
+    <div (click)="doIconShow(2)">
+      <span><img *ngIf="payIndex ==1" src="../../../assets/imgs/paydo_icon_4.png"> <img *ngIf="payIndex ==2" src="../../../assets/imgs/paydo_icon_1.png"> <img src="../../../assets/imgs/paydo_icon_2.png"></span>
+      <span>支付宝支付</span>
+    </div>
+  </div>
+  <div class="goPay btn" id="WXPAY" (click)="goPayDoing()">
+    微信支付
+  </div>
+  <div id="ZFBPAY">
+
+  </div>
+  <div class="pay-footer-icon">
+    <img src="../../assets/imgs/payment_kouhao.png">
+  </div>
+</div>
+<app-footer [select]="2"></app-footer>

@@ -1,0 +1,53 @@
+
+<div class="home">
+  <!--<div class="header">
+    <h5>首页</h5>
+  </div>-->
+  <div class="content">
+    <div class="home-header-img">
+      <img src="../../../assets/imgs/home-icon-5.png" alt="首页图">
+    </div>
+    <div class="home-footer cl">
+      <a href="javascript:void(0);">
+        <img src="../../../assets/imgs/home-icon-1.png">
+        <h5>专</h5>
+        <p>数百名资深专业皮<br>
+          革辅料买手</p>
+      </a>
+      <a href="javascript:void(0);">
+        <img src="../../../assets/imgs/home-icon-2.png">
+        <h5>快</h5>
+        <p>3分钟响应、3小时<br>
+          反馈、8小时内找到</p>
+      </a>
+      <a href="javascript:void(0);">
+        <img src="../../../assets/imgs/home-icon-3.png">
+        <h5>好</h5>
+        <p>与国内正规工厂合<br>
+          作，质量有保障</p>
+      </a>
+      <a href="javascript:void(0);">
+        <img src="../../../assets/imgs/home-icon-4.png">
+        <h5>省</h5>
+        <p>平台大批量采购，省<br>
+          时省心更省钱</p>
+      </a>
+    </div>
+    <div class="home-record cl">
+      <h3>截至当前</h3>
+      <p>提供服务<span>{{service_num || "暂无数据"}}</span>次</p>
+      <p>提供服务<span>{{people_num|| "暂无数据"}}</span>人</p>
+    </div>
+    <div class="btn home_search_btn" (click)="search()">
+      去充值
+    </div>
+    <!--<div class="home-notice">
+      <img src="../../../assets/imgs/home_notice.png" alt="notice">
+      <a routerLink="/home-explain">《用户找料须知》</a>
+    </div>-->
+    <div class="home_phone"><div><img src="../../../assets/imgs/phone_red.png" alt="phone"></div><a class="txt" href="tel:400-8088-156">电话: 400-8088-156</a></div>
+
+  </div>
+</div>
+<app-footer [select]="1"></app-footer>
+<app-popup *ngIf="isLogin" (toLogin)="toLogin($event)" ></app-popup>

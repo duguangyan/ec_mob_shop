@@ -1,0 +1,17 @@
+<div class="shopping-order-invoice">
+ <!-- <app-header [title]="title" [edit]="edit" (parentGoBack)="goBack()" ></app-header>-->
+  <div class="order-invoice-content">
+    <ul>
+      <li class="cl" *ngFor="let om of orderMessages">
+        <div class="order-invoice-pic">
+          <img [src]="om.goods_img_url" alt="图片">
+        </div>
+        <div class="order-invoice-messgae">
+          <h3>{{om.goods_attr}}</h3>
+          <p class="order-invoice-p1"><span>{{om.sale_props_str}}</span> <!--<span>型号:01#</span>--></p>
+          <p class="order-invoice-p2"><span class="order-invoice-price">￥{{om.shop_price}}</span> <span>x{{om.number}}</span></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

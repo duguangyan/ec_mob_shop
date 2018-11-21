@@ -1,0 +1,18 @@
+<div>
+  <div class="guess-you-like">
+    <div class="guess-you-like-title">
+      <div> <img src="../../../../assets/imgs/guess-you-like-title-1.png" alt="图标"> <span>猜你喜欢</span></div>
+    </div>
+  </div>
+  <div class="filtrate-detail-content">
+    <ul class="cl">
+      <li *ngFor="let item of guessYouLikeData" (click)="goDetail(item.id)">
+        <img [src]="item.goods_img_url" >
+        <p>{{item.name}}</p>
+        <p class="cl"><span class="price">￥{{item.shop_price}}</span> <span class="address">广东省广州市</span></p>
+      </li>
+    </ul>
+  </div>
+  <div class="nodata">数据已加载完毕</div>
+</div>
+

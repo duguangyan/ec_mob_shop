@@ -1,0 +1,10 @@
+<div class="submit-success">
+  <img src="../../../../assets/imgs/paysuccess.png">
+  <p>您的订单已提交成功，请耐心等待商家确认订单</p>
+  <p *ngFor="let o of orders">订单编号：{{o.sn || '暂无'}}</p>
+  <div class="success-btn">
+    <a href="javascript:void(0)" (click)="goHomePage()">返回首页</a>
+    <a href="javascript:void(0)" (click)="goOrderDetail()">查看订单详情</a>
+  </div>
+
+</div>

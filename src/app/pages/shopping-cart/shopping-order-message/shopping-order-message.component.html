@@ -1,0 +1,62 @@
+<div class="shopping-order-message">
+ <!-- <app-header [title]="title" (parentGoBack)="goBack()"></app-header>-->
+
+  <div class="order-message-content">
+    <div class="message-content-address" (click)="goShoppingOrderAddress()">
+      <div *ngIf="isAdressData">
+        <img src="../../../../assets/imgs/shopping_address.png" alt="地址">
+        <h3>{{adressData.consignee}}   {{adressData.mobile}}</h3>
+        <p>{{adressData.address}}</p>
+      </div>
+      <p *ngIf="!isAdressData">您的收货地址为空,点此添加收货地址</p>
+      <img src="../../../../../assets/imgs/arrows_right.png" alt="右箭头">
+      <img src="../../../../../assets/imgs/product_demand_content_icon_1.png" alt="底部条状图片">
+    </div>
+    <div *ngFor="let oms of orderMessages;let i=index;">
+      <div class="message-content-pic" (click)="goOrderInvoice(i)">
+        <h3>{{oms.shop_name}}</h3>
+        <div>
+          <div class="content-pic-warp">
+            <img *ngFor="let om of oms.skus" [src]="om.goods_img_url" alt="图片">
+          </div>
+        </div>
+        <p>共{{oms.skus.length}}件 <img src="../../../../assets/imgs/arrows_right.png" alt="箭头"></p>
+      </div>
+      <div class="message-banner message-banner-textarea">
+        <input type="text" placeholder="给买家留言(最多20字)" maxlength="20">
+        <!--<textarea placeholder="给买家留言(最多20字)" cols="5"></textarea>-->
+      </div>
+    </div>
+
+    <div class="message-banner message-pay" (click)="showPaymentChoice()">
+      <span>支付方式</span><span>{{ paymentPattern}}</span>
+      <img src="../../../../../assets/imgs/arrows_right.png" alt="右箭头">
+    </div>
+    <div class="message-banner ">
+      <span>运费</span><span>到付</span>
+    </div>
+    <div class="message-banner" (click)="goOrderDebitnote()">
+      <span>发票</span><span>{{debitnote}}</span>
+      <img src="../../../../../assets/imgs/arrows_right.png" alt="右箭头">
+    </div>
+    <div class="message-banner message-pay">
+      <span>商品金额</span>
+      <span style="color: #d5393c">￥ {{totalMoney|number:'1.2-2'}}</span>
+    </div>
+  </div>
+
+  <div class="order-message-footer cl">
+    <div class="message-footer-left">
+       <p>应付总额(不含运费):<span>￥ {{totalMoney|number:'1.2-2'}}</span></p>
+    </div>
+    <div class="message-footer-right">
+      <a href="javascript:void(0);" (click)="payOK()">提交订单</a>
+    </div>
+  </div>
+  <app-payment-choice [checkIndex]="checkIndex" *ngIf="isPaymentChoice" (parentDoOk)="doOK($event)"></app-payment-choice>
+</div>
+
+
+
+
+

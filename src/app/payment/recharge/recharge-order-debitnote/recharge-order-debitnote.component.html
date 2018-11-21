@@ -1,0 +1,52 @@
+<div class="shopping-order-debitnote">
+  <!--<app-header [title]="title"  (parentGoBack)="goBack()" ></app-header>-->
+  <div class="order-debitnote-content">
+    <!--<div class="order-debitnote-type">
+      <h3>发票类型</h3>
+      <div class="debitnote-type-btn">
+        <a href="javascript:void(0);" [ngClass]="{'debitnote-type-ac':typeActive}" (click)="checkType()">电子发票</a>
+        <a href="javascript:void(0);" [ngClass]="{'debitnote-type-ac':!typeActive}" (click)="checkType()">纸质发票</a>
+      </div>
+    </div>-->
+    <div class="order-debitnote-header">
+      <h3>发票类型:普通电子发票</h3>
+      <div class="debitnote-header-btn">
+        <!--<a (click)="checkHeader(1)" href="javascript:void(0);">
+          <i [ngClass]="{'icon-active':headerBtnActive == 1,'icon-prototype':headerBtnActive !== 1}" >
+            <img *ngIf="headerBtnActive == 1" src="../../../../assets/imgs/shopping_icon_active.png">
+          </i> 不开发票</a>-->
+        <a (click)="checkHeader(2)" href="javascript:void(0);">
+          <i [ngClass]="{'icon-active':headerBtnActive == 2,'icon-prototype':headerBtnActive !== 2}" >
+            <img *ngIf="headerBtnActive == 2" src="../../../../assets/imgs/shopping_icon_active.png">
+          </i> 个人</a>
+        <a (click)="checkHeader(3)" href="javascript:void(0);">
+          <i [ngClass]="{'icon-active':headerBtnActive == 3,'icon-prototype':headerBtnActive !== 3}" >
+            <img *ngIf="headerBtnActive == 3" src="../../../../assets/imgs/shopping_icon_active.png">
+          </i> 单位</a>
+        <!--<a href="javascript:void(0);"> &lt;!&ndash;(click)="checkHeader(4)"&ndash;&gt;
+          <i [ngClass]="{'icon-active':headerBtnActive == 4,'icon-prototype':headerBtnActive !== 4}" >
+            <img *ngIf="headerBtnActive == 4" src="../../../../assets/imgs/shopping_icon_active.png">
+          </i> 增值税专用发票</a>-->
+      </div>
+      <h3 *ngIf="headerBtnActive == 2 || headerBtnActive == 3">发票信息</h3>
+      <div class="debitnote-header-message header-message-1" *ngIf="headerBtnActive == 2">
+        <span>发票抬头: </span><input type="text" placeholder="请填写个人姓名" value="个人"  disabled readonly onfocus="this.placeholder=''" onblur="this.placeholder='请填写个人姓名'">
+      </div>
+      <div class="debitnote-header-message" *ngIf="headerBtnActive == 3">
+        <div>
+          <span><em class="message-em">*</em>发票抬头: </span><input type="text" [(ngModel)]="inv_payee"  onfocus="this.placeholder=''" onblur="this.placeholder='请填写公司名称'" placeholder="请填写公司名称">
+        </div>
+        <div>
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;<em class="message-em">*</em>识别号: </span><input type="text" [(ngModel)]="inv_tax" placeholder="请在此填写纳税人识别号" onfocus="this.placeholder=''" onblur="this.placeholder='请在此填写纳税人识别号'">
+        </div>
+      </div>
+    </div>
+
+    <div class="debitnote-pic">
+      <img src="../../../../assets/imgs/debitnote-pic.png" alt="发票">
+    </div>
+    <div class="debitnote-btn" (click)="doOK()">
+      确定
+    </div>
+  </div>
+</div>

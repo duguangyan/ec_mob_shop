@@ -1,0 +1,31 @@
+<div class="footer cl">
+  <a routerLink="/home" routerLinkActive="main-active">
+    <div>
+      <img src="../../assets/imgs/home_icon_active.png" alt="home">
+      <img src="../../assets/imgs/home_icon.png" alt="home">
+    </div>
+    <p>首页</p>
+  </a>
+  <a routerLink="/search"  routerLinkActive="main-active">
+    <div>
+      <img src="../../assets/imgs/search_icon_active.png" alt="search">
+      <img src="../../assets/imgs/search_icon.png" alt="search">
+    </div>
+    <p>小鹿快找</p>
+  </a>
+  <a routerLink="/shopping-cart"   routerLinkActive="main-active">
+    <div>
+      <span class="cart-number" *ngIf="shoppingCartNumber!=''">{{shoppingCartNumber}}</span>
+      <img src="../../assets/imgs/shop_icon.png" alt="search">
+      <img src="../../assets/imgs/shop_icon.png" alt="search">
+    </div>
+    <p>购物车</p>
+  </a>
+  <a routerLink="/settings"  routerLinkActive="main-active">
+    <div>
+      <img src="../../assets/imgs/settings_icon_active.png" alt="settings">
+      <img src="../../assets/imgs/settings_icon.png" alt="settings">
+    </div>
+    <p>个人中心</p>
+  </a>
+</div>

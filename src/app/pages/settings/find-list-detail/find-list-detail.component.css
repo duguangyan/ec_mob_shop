@@ -1,0 +1,188 @@
+.content{
+  margin-top: 0;
+}
+.detail .title{
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px!important;
+  color: #333;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.detail .form {
+  border-top: 10px solid #efeff4;
+  border-bottom: 10px solid #efeff4;
+}
+.detail p{
+  font-size: 30px;
+  color: #333;
+  margin-left: 20px;
+  line-height: 50px;
+}
+.detail span{
+  margin-left: 20px;
+}
+.detail h5{
+  font-size: 24px !important;
+}
+.describe {
+  position: relative;
+}
+.describe h5{
+  text-align: left;
+  font-size: 30px!important;
+  color: #333;
+  line-height: 60px;
+  position: absolute;
+  left: 80px;
+}
+.describe p{
+  width: 70%;
+  min-height: 60px;
+  font-size: 30px;
+  color: #333;
+  padding: 10px;
+  overflow-y: auto;
+  margin-left: 170px;
+  line-height: 45px;
+}
+
+.way {
+  border-top: 10px solid #efeff4;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.way h5 {
+  text-align: left;
+  font-size: 30px!important;
+  color: #333;
+  padding-left: 20px;
+}
+.way span{
+  font-size: 30px;
+  margin-left: 20px;
+  color:#333 ;
+}
+.way h5 span{
+  margin-left: 10px;
+}
+.wayContent1 p{
+  font-size: 30px;
+  color: #333;
+  text-align: left;
+  margin-left: 170px;
+}
+
+
+.wayContent2 ul {
+  padding-left: 0;
+  width: 80%;
+  margin: 0 10%;
+  margin-bottom: 20px;
+}
+.wayContent2 ul li {
+  float: left;
+  width: 150px;
+  padding-left: 20px;
+}
+.wayContent2 ul li p{
+  margin-left: 0;
+}
+.wayContent2 ul li div {
+  height: 200px;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #e2e2e2;
+  border-radius:10px;
+}
+.wayContent2 ul li img{
+  height: 100%;
+  width: 100%;
+}
+
+.wayContent2 ul li p{
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.wayContent3 p{
+  text-align: left;
+  font-size: 30px;
+  color: #333;
+  margin-left: 170px;
+  line-height: 50px;
+}
+.wayContent3 p:nth-child(1){
+  position: relative;
+}
+.wayContent3 p:last-child{
+  position: relative;
+}
+.wayContent3 p:last-child span:nth-child(1){
+  margin-left: 0;
+
+}
+.wayContent3 p:last-child span:nth-child(2){
+  display: inline-block;
+  width: 76%;
+  margin-left: 19%;
+}
+.order{
+  padding: 20px 0;
+}
+.order {
+  border-top: 10px solid #efeff4;
+}
+.order p {
+  margin-left: 20%;
+  line-height: 50px;
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
+  .order p {
+    margin-left: 10px;
+    line-height: 50px;
+  }
+}
+.order p img{
+  width: 24px;
+  position: relative;
+  top: -5px;
+  margin-right: 10px;
+}
+.order span{
+  font-size: 30px;
+  color: #333;
+  margin-left: 10px;
+  padding: 0 5px;
+}
+.order i{
+  position: relative;
+  top: 10px;
+}
+.payBtn{
+  line-height: 60px;
+  background-color: #d5393c;
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 5px;
+  margin-left: 30%;
+  color: #fff!important;
+  text-decoration: none;
+  margin-bottom: 60px;
+}
+.form{
+  padding: 20px 0;
+}
+.black{
+  background-color: #999;
+  color: #cdcdcd !important;
+}
+.check-invoice{
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 20px 10px;
+  color: #666;
+  text-decoration: underline;
+}
+
